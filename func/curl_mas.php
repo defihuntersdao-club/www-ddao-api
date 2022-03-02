@@ -51,7 +51,7 @@ $proxy = "--proxy http://$t[0]:$t[1]";
 //die;
 }
 */
-$proxy = proxy_get();
+//$proxy = proxy_get();
 
 
 $curl = $curl1."'".$js."' $proxy $curl2  2>/dev/null";
