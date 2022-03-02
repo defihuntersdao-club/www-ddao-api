@@ -3,13 +3,19 @@
 
 include "conf.php";
 
+$time = time();
+
 $contractAddress = "0xa9a2d6b16f3dd4c145aa8c875b9ceb8cda3022e3";
 
 $n_mas[0] = "ddao_seed_";
 $n_mas[1] = "ddao_private1_";
 $n_mas[2] = "ddao_private2_";
 
-
+do
+{
+unset($q);
+unset($jss);
+unset($wal_mas);
 $q[] = "SELECT * FROM address WHERE ymdhi = '".date("YmdHi",time())."'";
 $q[] = "SELECT * FROM address WHERE ymdhi = '".date("YmdHi",time()-60)."'";
 $query = "(".implode(")UNION(",$q).")";
@@ -129,8 +135,25 @@ print_r($o);
 foreach($o as $w=>$v2)
 {
     $txt = json_encode($v2,192);
-//    $f
+    $f = $cache_dir.$w.".json";
+//    if(file_exists($f))
+    $a = @file_get_contents($f);
+    if(md5($a) != md5($txt))
+    {
+    file_put_contents($f,$txt);
+    print "Save $w\n";
+    }
+
 }
+
+for($i=0;$i<3;$i++)
+{
+    print ".";
+    sleep(1);
+}
+
+}
+while(time() < ($time+59));
 
 print "END\n";
 ?>
