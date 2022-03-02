@@ -5,7 +5,14 @@ include "conf.php";
 
 $time = time();
 
-$contractAddress = "0xa9a2d6b16f3dd4c145aa8c875b9ceb8cda3022e3";
+switch($argv[1])
+{
+    case "test":
+    break;
+    default:
+    $contractAddress = "0xa9a2d6b16f3dd4c145aa8c875b9ceb8cda3022e3";
+    $tkn = "0x90F3edc7D5298918F7BB51694134b07356F7d0C7";
+}
 
 $n_mas[0] = "ddao_seed_";
 $n_mas[1] = "ddao_private1_";
@@ -96,6 +103,39 @@ $v[params][1] = "latest";
 //$v[id] = $net."_"."AllocSaleAmount_".$sale_id;
 $v[id] = $w."-".$n_mas[$i]."claimed";
 $jss[] = $v;
+
+//------------------------------------------------
+unset($t);
+//$t[from] = $wal;
+//$b = "0xdd3680fc";
+$b = "0x70a08231";
+//0x70a08231000000000000000000000000b2207c34de61f3018576cb637fa90dae0425d916
+/*
+$t2 = $i; 
+$t2 = view_number($t2,64,"0");
+$b .= $t2;
+*/
+
+$t2 = substr($w,2);
+$t2 = view_number($t2,64,"0");
+$b .= $t2;
+
+
+$t[data] = $b;
+$t[to] = $tkn;
+//print_r($t);
+
+$v[jsonrpc] = "2.0";
+$v[method] = "eth_call";
+//$v[params][0] = $row[wal];
+$v[params][0] = $t;
+$v[params][1] = "latest";
+//$v[id] = $row[id];
+//$v[id] = $net."_"."AllocSaleAmount_".$sale_id;
+$v[id] = $w."-"."ddao_balance";
+$jss[] = $v;
+
+
 }
 
 }
