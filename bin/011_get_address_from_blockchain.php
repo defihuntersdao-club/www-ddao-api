@@ -7,6 +7,8 @@ print date("Y-m-d H:i:s\n");
 
 $time = time();
 
+print_r($argv);
+
 switch($argv[1])
 {
     case "test":
