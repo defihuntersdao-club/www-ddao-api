@@ -247,8 +247,14 @@ foreach($o as $w=>$v2)
 {
     $txt = json_encode($v2,192);
     $f = $cache_dir.$w.".json";
-//    if(file_exists($f))
     $a = @file_get_contents($f);
+//    if(file_exists($f))
+//print $f."\n";
+//print "md5(a) = ".md5($a)."\n";
+//print $a;
+//print "\nmd5(t) = ".md5($txt)."\n";
+//print $txt."\n";
+
     if(md5($a) != md5($txt))
     {
     file_put_contents($f,$txt);
