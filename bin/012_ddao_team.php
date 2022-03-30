@@ -7,6 +7,7 @@ print date("Y-m-d H:i:s\n");
 
 $time = time();
 
+/*
 print_r($argv);
 
 
@@ -23,11 +24,13 @@ switch($argv[1])
         $tkn 	= "0x90F3edc7D5298918F7BB51694134b07356F7d0C7";
 	$tkn2 	= "0xCA1931C970CA8C225A3401Bb472b52C46bBa8382";
 }
+*/
+//$contractAddress = "0xAAC0EeB23A168387711BAace2F142F02AA117169";
+$contractAddress = "0x867d2C3a1EF241668Ef6a2FF73513E4831CC5630";
 
-
-$n_mas[0] = "ddao_seed_";
-$n_mas[1] = "ddao_private1_";
-$n_mas[2] = "ddao_private2_";
+$n_mas[0] = "ddao_team_";
+//$n_mas[1] = "ddao_private1_";
+//$n_mas[2] = "ddao_private2_";
 
 do
 {
@@ -51,36 +54,20 @@ print_r($wal_mas);
 foreach($wal_mas as $w)
 {
 
-for($i=0;$i<3;$i++)
+//for($i=0;$i<3;$i++)
 {
 //------------------------------------------------
 unset($t);
-//$t[from] = $wal;
-//$b = "0xdd3680fc";
-/*
-$b = "0x6c75356b";
-//0x70a08231000000000000000000000000b2207c34de61f3018576cb637fa90dae0425d916
+
+//ClaimAmount
+$b = "0x5e23e037";
 $t2 = substr($w,2);
 $t2 = view_number($t2,64,"0");
 $b .= $t2;
 
-$t2 = $i; 
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
-
-$t2 = 0; 
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
-*/
-
-$b = "0x675b6ac9";
-$t2 = substr($w,2);
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
-
-$t2 = $i; 
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
+//$t2 = $i; 
+//$t2 = view_number($t2,64,"0");
+//$b .= $t2;
 
 $t[data] = $b;
 $t[to] = $contractAddress;
@@ -93,19 +80,21 @@ $v[params][0] = $t;
 $v[params][1] = "latest";
 //$v[id] = $row[id];
 //$v[id] = $net."_"."AllocSaleAmount_".$sale_id;
-$v[id] = $w."-".$n_mas[$i]."aviable";
+$v[id] = $w."-".$n_mas[0]."aviable";
 $jss[] = $v;
 
 //------------------------------------------------
 unset($t);
 //$t[from] = $wal;
 //$b = "0xdd3680fc";
-$b = "0x0cabfbb3";
+//$b = "0x0cabfbb3";
+# claimed (payed)
+$b = "0xb449c24d";
 //0x70a08231000000000000000000000000b2207c34de61f3018576cb637fa90dae0425d916
 
-$t2 = $i; 
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
+//$t2 = $i; 
+//$t2 = view_number($t2,64,"0");
+//$b .= $t2;
 
 $t2 = substr($w,2);
 $t2 = view_number($t2,64,"0");
@@ -123,75 +112,8 @@ $v[params][0] = $t;
 $v[params][1] = "latest";
 //$v[id] = $row[id];
 //$v[id] = $net."_"."AllocSaleAmount_".$sale_id;
-$v[id] = $w."-".$n_mas[$i]."claimed";
+$v[id] = $w."-".$n_mas[0]."claimed";
 $jss[] = $v;
-
-//------------------------------------------------
-unset($t);
-//$t[from] = $wal;
-//$b = "0xdd3680fc";
-$b = "0x70a08231";
-//0x70a08231000000000000000000000000b2207c34de61f3018576cb637fa90dae0425d916
-/*
-$t2 = $i; 
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
-*/
-
-$t2 = substr($w,2);
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
-
-
-$t[data] = $b;
-$t[to] = $tkn;
-//print_r($t);
-
-$v[jsonrpc] = "2.0";
-$v[method] = "eth_call";
-//$v[params][0] = $row[wal];
-$v[params][0] = $t;
-$v[params][1] = "latest";
-//$v[id] = $row[id];
-//$v[id] = $net."_"."AllocSaleAmount_".$sale_id;
-$v[id] = $w."-"."ddao_balance";
-$jss[] = $v;
-
-//------------------------------------------------
-unset($t);
-//$t[from] = $wal;
-//$b = "0xdd3680fc";
-$b = "0xdd62ed3e";
-//0x70a08231000000000000000000000000b2207c34de61f3018576cb637fa90dae0425d916
-/*
-$t2 = $i; 
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
-*/
-
-$t2 = substr($w,2);
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
-
-$t2 = substr($contractAddress,2);
-$t2 = view_number($t2,64,"0");
-$b .= $t2;
-
-
-$t[data] = $b;
-$t[to] = $tkn2;
-//print_r($t);
-
-$v[jsonrpc] = "2.0";
-$v[method] = "eth_call";
-//$v[params][0] = $row[wal];
-$v[params][0] = $t;
-$v[params][1] = "latest";
-//$v[id] = $row[id];
-//$v[id] = $net."_"."AllocSaleAmount_".$sale_id;
-$v[id] = $w."-"."addao_allowance";
-$jss[] = $v;
-
 
 
 }
@@ -236,8 +158,8 @@ foreach($mas as $v2)
     }
     $o[$w][$k] = $t;
 
-$o[$w][addr_contract] = $contractAddress;
-$o[$w][addr_addao] = $tkn2;
+$o[$w][contract_ddao_team] = $contractAddress;
+//$o[$w][addr_addao] = $tkn2;
 //$o[$w][time] = date("Y-m-d H:i:s");
 
 }
