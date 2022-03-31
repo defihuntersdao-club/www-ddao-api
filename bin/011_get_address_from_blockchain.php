@@ -13,16 +13,19 @@ print_r($argv);
 switch($argv[1])
 {
     case "test":
-        $contractAddress = "0xb50c22c740D5a034023459bAccD3c785C6bB8303";
+        $contractAddressGlob = "0xb50c22c740D5a034023459bAccD3c785C6bB8303";
 	$tkn 	= "0x47a1162C73b565c7F0a5bD16168e3B2cA38942D5";
 	$tkn2	= "0x0EEAfFCfeA437f5822Fc1537b95Fc84EEBb3D9Db";
 	
     break;
     default:
-	$contractAddress = "0xa9a2d6b16f3dd4c145aa8c875b9ceb8cda3022e3";
+	$contractAddressGlob = "0xa9a2d6b16f3dd4c145aa8c875b9ceb8cda3022e3";
         $tkn 	= "0x90F3edc7D5298918F7BB51694134b07356F7d0C7";
 	$tkn2 	= "0xCA1931C970CA8C225A3401Bb472b52C46bBa8382";
 }
+
+$c_addr["0xdcbeffbecce100cce9e4b153c4e15cb885643193"] = "0x03d860c45a4F8228DfF9560Abd788bCAeBca1C57";
+//if()
 
 
 $n_mas[0] = "ddao_seed_";
@@ -50,6 +53,25 @@ print_r($wal_mas);
 
 foreach($wal_mas as $w)
 {
+
+$contractAddress = $contractAddressGlob;
+if($c_addr[$w])
+$contractAddress = $c_addr[$w];
+
+$addr_contract[$w] = $contractAddress;
+//if($w == "0xdcbEfFBECcE100cCE9E4b153C4e15cB885643193")
+/*
+if($w == "0xdcbeffbecce100cce9e4b153c4e15cb885643193")
+{
+$contractAddressOld = $contractAddress;
+$contractAddress  = "0x03d860c45a4F8228DfF9560Abd788bCAeBca1C57";
+}
+else 
+{
+    if(isset($contractAddressOld))$contractAddress = $contractAddress;
+}
+*/
+//print $w."\n";die;
 
 for($i=0;$i<3;$i++)
 {
@@ -236,7 +258,8 @@ foreach($mas as $v2)
     }
     $o[$w][$k] = $t;
 
-$o[$w][addr_contract] = $contractAddress;
+//$o[$w][addr_contract] = $contractAddress;
+$o[$w][addr_contract] = $addr_contract[$w];
 $o[$w][addr_addao] = $tkn2;
 //$o[$w][time] = date("Y-m-d H:i:s");
 
