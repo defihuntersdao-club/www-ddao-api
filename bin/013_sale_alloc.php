@@ -1,11 +1,12 @@
 #!/usr/bin/php
 <?php
 
-// no cron file
-// one start this, after modify file in sale dir
+
+// * * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./013_sale_alloc.php > 013_sale_alloc.log 2>&1
 
 include "conf.php";
 //error_reporting(65535);
+print date("Y-m-d H:i:s\n");
 
 $d = __DIR__."/sale/";
 $h = opendir($d);
@@ -59,5 +60,16 @@ foreach($o2 as $w=>$v)
     $f = $cache_dir."tmp/".$w.".".$t[filename].".json";
 
     $t = json_encode($v,192);
+    $need_save = 1;
+    if(file_exists($f))
+    {
+	$a = file_get_contents($f);
+	if(md5($a) == md5($t))
+	$need_save = 0;
+    }
+    if($need_save)
+    {
+	print "SAVE: ".$f."\n";
     file_put_contents($f,$t);
+    }
 }
