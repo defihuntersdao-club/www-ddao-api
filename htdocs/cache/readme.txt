@@ -1,1 +1,1 @@
-dir for wallet cache info
+tmp dir for wallet processing
