@@ -1,4 +1,4 @@
 */cache/*.json
 *.log
-*/htdocs/cache/tmp/*
+*/htdocs/cache/tmp/*.json
 */htdocs/cache/*.json
