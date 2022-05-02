@@ -6,6 +6,9 @@ include "../conf.php";
 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 if(in_array($ip,$debug_ip))$debug = 1;
 
+$debug_file = "/tmp/api_debug.txt";
+$debug = @file_get_contents($debug_file);
+
 
 $ref = $_SERVER[HTTP_REFERER];
 $t = pathinfo($ref);

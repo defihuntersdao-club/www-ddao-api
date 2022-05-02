@@ -2,6 +2,10 @@
 $w = $item2;
 $tbl = "address";
 
+//$debug_file = "/tmp/api_debug.txt";
+//$debug = @file_get_contents($debug_file);
+
+
 //print_r($_SERVER);
 $ref = $_SERVER[HTTP_REFERER];
 
@@ -40,9 +44,13 @@ if(strlen($w)==42 && substr($w,0,2)=="0x")
 //    $o[result] = $w;
 
     $f = $cache_dir.$w.".json";
+    $ftime = filemtime($f);
     $a = file_get_contents($f);
     $a = json_decode($a,1);
     $o[result] = $a;
+    $o[result][app_address] = $w;
+    $o[updated] = date("Y-m-d H:i:s",$ftime);
+    
 
 //    if($debug)    $o[log] = $q_log;
 }
@@ -50,4 +58,9 @@ else
 {
     $o[error] = "Wallet error";
 }
+
+if($debug)
+{
+}
+
 ?>
