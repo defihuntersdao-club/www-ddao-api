@@ -28,6 +28,7 @@ switch($argv[1])
 //$contractAddress = "0xAAC0EeB23A168387711BAace2F142F02AA117169";
 
 $contractAddress = "0x5E1dA69FDE8f9D041B6B95167875D23AAb43281F";
+//$contractAddress = "0xb86184B25B93d66cB5A20292BD2cd7724713Bf6A";
 
 $n_mas[0] = "ddao_dbayc_";
 //$n_mas[1] = "ddao_private1_";
