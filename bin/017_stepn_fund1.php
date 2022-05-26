@@ -327,12 +327,13 @@ foreach($o[wals] as $w=>$v2)
     $o3[$w][$kk] = $t2;;
 
     $kk = $prefix."status";
-    $t = $o[glob][minimal];
-    if($t==1)
+    $t2 = $o[glob][status];
+    if($t2=="1")
     $t = "live";
     else
     $t = "finished";    
     $o3[$w][$kk] = $t;;
+//print "=======================$t: $t2\n";die;
 
     foreach($v2 as $k=>$v)
     {
