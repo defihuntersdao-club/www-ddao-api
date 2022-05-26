@@ -1,0 +1,281 @@
+{
+    "count": 55,
+    "time": 1652644980,
+    "num": [
+        {
+            "name": "AllocSaleAmount",
+            "value": 136933,
+            "nn": 0
+        },
+        {
+            "name": "matic_AllocSaleAmount",
+            "value": "75811",
+            "nn": 1
+        },
+        {
+            "name": "AllocSaleCount",
+            "value": 91,
+            "nn": 2
+        },
+        {
+            "name": "matic_AllocSaleCount",
+            "value": "47",
+            "nn": 3
+        },
+        {
+            "name": "LevelMin",
+            "value": 15200,
+            "nn": 4
+        },
+        {
+            "name": "matic_LevelMin_1",
+            "value": "600",
+            "nn": 5
+        },
+        {
+            "name": "matic_LevelMin_2",
+            "value": "2000",
+            "nn": 6
+        },
+        {
+            "name": "matic_LevelMin_3",
+            "value": "5000",
+            "nn": 7
+        },
+        {
+            "name": "matic_Sale",
+            "value": 0,
+            "nn": 8
+        },
+        {
+            "name": "SaleEnabled",
+            "value": 0,
+            "nn": 9
+        },
+        {
+            "name": "matic_SaleEnabled",
+            "value": "0",
+            "nn": 10
+        },
+        {
+            "name": "AllocSaleLevelAmount1",
+            "value": 53333,
+            "nn": 11
+        },
+        {
+            "name": "matic_AllocSaleLevelAmount1",
+            "value": "24811",
+            "nn": 12
+        },
+        {
+            "name": "AllocSaleLevelCount1",
+            "value": 69,
+            "nn": 13
+        },
+        {
+            "name": "matic_AllocSaleLevelCount1",
+            "value": "35",
+            "nn": 14
+        },
+        {
+            "name": "AllocSaleLevelAmount2",
+            "value": 28600,
+            "nn": 15
+        },
+        {
+            "name": "matic_AllocSaleLevelAmount2",
+            "value": "11000",
+            "nn": 16
+        },
+        {
+            "name": "AllocSaleLevelCount2",
+            "value": 12,
+            "nn": 17
+        },
+        {
+            "name": "matic_AllocSaleLevelCount2",
+            "value": "5",
+            "nn": 18
+        },
+        {
+            "name": "AllocSaleLevelAmount3",
+            "value": 55000,
+            "nn": 19
+        },
+        {
+            "name": "matic_AllocSaleLevelAmount3",
+            "value": "40000",
+            "nn": 20
+        },
+        {
+            "name": "AllocSaleLevelCount3",
+            "value": 10,
+            "nn": 21
+        },
+        {
+            "name": "matic_AllocSaleLevelCount3",
+            "value": "7",
+            "nn": 22
+        },
+        {
+            "name": "bsc_AllocSaleAmount",
+            "value": "61122",
+            "nn": 23
+        },
+        {
+            "name": "bsc_AllocSaleCount",
+            "value": "44",
+            "nn": 24
+        },
+        {
+            "name": "bsc_LevelMin_1",
+            "value": "600",
+            "nn": 25
+        },
+        {
+            "name": "bsc_LevelMin_2",
+            "value": "2000",
+            "nn": 26
+        },
+        {
+            "name": "bsc_LevelMin_3",
+            "value": "5000",
+            "nn": 27
+        },
+        {
+            "name": "bsc_Sale",
+            "value": 0,
+            "nn": 28
+        },
+        {
+            "name": "bsc_SaleEnabled",
+            "value": "0",
+            "nn": 29
+        },
+        {
+            "name": "bsc_AllocSaleLevelAmount1",
+            "value": "28522",
+            "nn": 30
+        },
+        {
+            "name": "bsc_AllocSaleLevelCount1",
+            "value": "34",
+            "nn": 31
+        },
+        {
+            "name": "bsc_AllocSaleLevelAmount2",
+            "value": "17600",
+            "nn": 32
+        },
+        {
+            "name": "bsc_AllocSaleLevelCount2",
+            "value": "7",
+            "nn": 33
+        },
+        {
+            "name": "bsc_AllocSaleLevelAmount3",
+            "value": "15000",
+            "nn": 34
+        },
+        {
+            "name": "bsc_AllocSaleLevelCount3",
+            "value": "3",
+            "nn": 35
+        },
+        {
+            "name": "cap",
+            "value": 220000,
+            "nn": 36
+        },
+        {
+            "name": "cap1",
+            "value": 88000,
+            "nn": 37
+        },
+        {
+            "name": "cap2",
+            "value": 66000,
+            "nn": 38
+        },
+        {
+            "name": "cap3",
+            "value": 66000,
+            "nn": 39
+        },
+        {
+            "name": "txs1",
+            "value": 69,
+            "nn": 40
+        },
+        {
+            "name": "paid1",
+            "value": 53333,
+            "nn": 41
+        },
+        {
+            "name": "avg_cap1",
+            "value": "~772",
+            "nn": 42
+        },
+        {
+            "name": "membersPers1",
+            "value": 40,
+            "nn": 43
+        },
+        {
+            "name": "txs2",
+            "value": 12,
+            "nn": 44
+        },
+        {
+            "name": "paid2",
+            "value": 28600,
+            "nn": 45
+        },
+        {
+            "name": "avg_cap2",
+            "value": "~2383",
+            "nn": 46
+        },
+        {
+            "name": "membersPers2",
+            "value": 31,
+            "nn": 47
+        },
+        {
+            "name": "txs3",
+            "value": 10,
+            "nn": 48
+        },
+        {
+            "name": "paid3",
+            "value": 55000,
+            "nn": 49
+        },
+        {
+            "name": "avg_cap3",
+            "value": "~5500",
+            "nn": 50
+        },
+        {
+            "name": "membersPers3",
+            "value": 20,
+            "nn": 51
+        },
+        {
+            "name": "AllocSaleAmount2",
+            "value": 136933,
+            "nn": 52
+        },
+        {
+            "name": "SalePersent",
+            "value": 62,
+            "nn": 53
+        },
+        {
+            "name": "AllocSaleRefund",
+            "value": 0,
+            "nn": 54
+        }
+    ]
+}

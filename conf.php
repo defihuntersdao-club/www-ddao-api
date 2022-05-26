@@ -12,4 +12,6 @@ $f = "/debug_ip.php";
 if(file_exists($f))
 include $f;
 
+include __DIR__."/sale.php";
+
 ?>
