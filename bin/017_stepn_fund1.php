@@ -311,7 +311,7 @@ foreach($o[wals] as $w=>$v2)
 
     $kk = $prefix."all";
     $t = $o[glob][all]/10**18;
-    $t = round($t,2);
+    $t = round($t,3);
 //    $o3[$w][$kk] = rand(0,10);
     $o3[$w][$kk] = $t;
 
