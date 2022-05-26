@@ -8,7 +8,8 @@ $prefix = "stepn_fund1_";
 //$levels[1] = "lobster";
 //$levels[2] = "shark";
 //$levels[3] = "whale";
-$sale = 1;
+
+$sale = 2;
 
 print date("Y-m-d H:i:s\n");
 
