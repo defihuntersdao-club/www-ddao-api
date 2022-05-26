@@ -3,3 +3,4 @@
 * * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./012_ddao_team.php > 012_ddao_team.log 2>&1
 * * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./013_sale_alloc.php > 013_sale_alloc.log 2>&1
 * * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./014_ddao_claim_dBayc.php > 014_ddao_claim_dBayc.log 2>&1
+* * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./017_stepn_fund1.php > 017_stepn_fund1.log 2>&1
