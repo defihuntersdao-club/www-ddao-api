@@ -13,6 +13,7 @@ $case = $item2;
 
 switch($case)
 {
+    case "metatg":
     case "ddao_learn":
     case "defiyeld":
     case "gbc":
@@ -104,6 +105,9 @@ switch($case)
 	    case "defiyeld":
 	    case "eywa":
 	    $v .= "svg";
+	    break;
+	    case "metatg":
+	    $v .= "gif";
 	    break;
 	    default:
 	    $v .= "png";

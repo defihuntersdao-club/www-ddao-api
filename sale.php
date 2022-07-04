@@ -88,6 +88,18 @@ $sale[$i][min][2]       = 2000;
 $sale[$i][min][3]       = 5000;
 
 
+$i = "metatg";
+$sale[$i][name] = "\$MetaTG";;
+$sale[$i][url] = "about:blank";
+$sale[$i][cap]  = 220000;
+$sale[$i][data] = "4 July 2022";
+$sale[$i][cap_txt]      = "\$ 220k";
+
+$sale[$i][funds_txt]    = "USDT";
+//$sale[$i][net][eth] 	= "images/ethereum.svg";
+$sale[$i][net][matic] 	= "images/poligon.svg";
+$sale[$i][net][bsc] 	= "images/bsc.svg";
+
 //$txt = json_encode($sale,192);
 //$f = "sale.json";
 //file_put_contents($f,$txt);

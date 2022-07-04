@@ -1,0 +1,11 @@
+{
+    "stepn_fund1_contract": "0x04AcCbd93343afe1A1F1da19f3bB613b39638baE",
+    "stepn_fund1_decimal": "16",
+    "stepn_fund1_all": 0.002,
+    "stepn_fund1_minimal": 0.2,
+    "stepn_fund1_step": 0.01,
+    "stepn_fund1_status": "live",
+    "stepn_fund1_txs": 0,
+    "stepn_fund1_amount": 0,
+    "stepn_fund1_balance": 0.001
+}
