@@ -3,3 +3,4 @@
 */htdocs/cache/tmp/*.json
 */htdocs/cache/tmp/*
 */htdocs/cache/*.json
+htdocs/cache/tmp/*
