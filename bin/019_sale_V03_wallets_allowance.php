@@ -384,10 +384,10 @@ foreach($v3 as $net=>$v2)
     }
     $act = "";
 //    if($v2[balance] < 20000)
-    if($v2[balance] < 400)
+    if($v2[balance] < 100)
     $act = "-";
 
-    if(!$act && $v2[allowance] < $v2[balance])
+    if(!$act && $v2[allowance] < $v2[balance]-1)
     $act = "approve";
 
     if(!$act)
