@@ -1,5 +1,5 @@
 <?php
-$sale = 3;
+$sale = 4;
 
 unset($rpc_mas,$c,$tkn);                                                                                                                                                                    
 $f = "/opt/rpc_need.txt";                                                                                                                                                                   
