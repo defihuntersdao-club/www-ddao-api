@@ -89,10 +89,10 @@ $sale[$i][min][3]       = 5000;
 
 
 $i = "metatg";
-$sale[$i][name] = "\$MetaTG";;
-$sale[$i][url] = "about:blank";
+$sale[$i][name] = "Meta Tycoon";;
+$sale[$i][url] = "https://metatycoon.com";
 $sale[$i][cap]  = 220000;
-$sale[$i][data] = "4 July 2022";
+$sale[$i][data] = "7 July 2022";
 $sale[$i][cap_txt]      = "\$ 220k";
 
 $sale[$i][funds_txt]    = "USDT";
