@@ -102,9 +102,9 @@ switch($case)
 	$v = "/images/logo_$case.";
 	switch($case)
 	{
-	    case "metatg":
+//	    case "metatg":
 	    case "defiyeld":
-	    case "eywa":
+//	    case "eywa":
 	    $v .= "svg";
 	    break;
 	    case "metatgold":
