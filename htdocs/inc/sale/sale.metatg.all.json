@@ -1,0 +1,26 @@
+{
+    "num": [
+        {
+            "name": "AllocSaleAmount",
+            "value": 220000,
+            "num": 0
+        },
+        {
+            "name": "AllocSaleAmount2",
+            "value": 220000,
+            "num": 1
+        },
+        {
+            "name": "SalePersent",
+            "value": 100,
+            "num": 2
+        },
+        {
+            "name": "AllocSaleCount",
+            "value": 5,
+            "num": 3
+        }
+    ],
+    "time": 1657264324,
+    "count": 4
+}
