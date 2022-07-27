@@ -1,0 +1,1139 @@
+2022-07-26 19:00:47
+Array
+(
+    [name] => Array
+        (
+            [pool_ddao_learn] => DDAO Learn
+            [pool_defiyeld] => defiyield.app
+            [pool_gbc] => GBC.AI Seed round
+            [pool_sabai] => Sabai Ecoverse
+            [pool_eywa] => eywa.fi
+            [pool_metatg] => Meta Tycoon
+            [pool_gearz] => Gearz NFT
+        )
+
+    [url] => Array
+        (
+            [pool_ddao_learn] => https://defihuntersdao.club/
+            [pool_defiyeld] => https://defiyield.app
+            [pool_gbc] => https://gbc.ai
+            [pool_sabai] => https://sabaiecoverse.com/
+            [pool_eywa] => https://eywa.fi
+            [pool_metatg] => https://metatycoon.com
+            [pool_gearz] => https://twitter.com/Gearz_NFT
+        )
+
+    [cap] => Array
+        (
+            [pool_ddao_learn] => 100000
+            [pool_defiyeld] => 200000
+            [pool_gbc] => 110000
+            [pool_sabai] => 132000
+            [pool_eywa] => 220000
+            [pool_metatg] => 220000
+            [pool_gearz] => 44000
+        )
+
+    [cap_txt] => Array
+        (
+            [pool_ddao_learn] => $ 110k
+            [pool_defiyeld] => $ 220k
+            [pool_gbc] => $ 110k
+            [pool_sabai] => $ 132k
+            [pool_eywa] => $ 220k
+            [pool_metatg] => $ 220k
+            [pool_gearz] => $ 44k
+        )
+
+    [funds_txt] => Array
+        (
+            [pool_ddao_learn] => App DDAO Learn Token
+            [pool_defiyeld] => USDT
+            [pool_gbc] => USDT
+            [pool_sabai] => USDT
+            [pool_eywa] => USDT
+            [pool_metatg] => USDT
+            [pool_gearz] => USDT
+        )
+
+    [net] => Array
+        (
+            [pool_ddao_learn] => Array
+                (
+                    [matic] => images/poligon.svg
+                    [bsc] => images/bsc.svg
+                )
+
+            [pool_defiyeld] => Array
+                (
+                    [eth] => images/ethereum.svg
+                )
+
+            [pool_gbc] => Array
+                (
+                    [eth] => images/ethereum.svg
+                    [matic] => images/poligon.svg
+                    [bsc] => images/bsc.svg
+                )
+
+            [pool_sabai] => Array
+                (
+                    [matic] => images/poligon.svg
+                    [bsc] => images/bsc.svg
+                )
+
+            [pool_eywa] => Array
+                (
+                    [matic] => images/poligon.svg
+                    [bsc] => images/bsc.svg
+                )
+
+            [pool_metatg] => Array
+                (
+                    [matic] => images/poligon.svg
+                    [bsc] => images/bsc.svg
+                )
+
+            [pool_gearz] => Array
+                (
+                    [matic] => images/poligon.svg
+                    [bsc] => images/bsc.svg
+                )
+
+        )
+
+    [SalePersent] => Array
+        (
+            [pool_ddao_learn] => 0
+            [pool_defiyeld] => 100
+        )
+
+    [0xc6d074b39a2cd27489c999a0ac4a9c3e41567f15] => Array
+        (
+            [pool_defiyeld] => 7463.62
+        )
+
+    [0x3df488bd07c2082e84b1cd63f343cf3d538342ba] => Array
+        (
+            [pool_defiyeld] => 7463.62
+        )
+
+    [0x256b09f7ae7d5fec8c8ac77184ca09f867bbbf4c] => Array
+        (
+            [pool_defiyeld] => 11000
+        )
+
+    [0x7777515751843e7cdcc47e10833e159c47777777] => Array
+        (
+            [pool_defiyeld] => 50000
+        )
+
+    [0x744ce174630f8a63c0ac161e222e44954bb9ce52] => Array
+        (
+            [pool_defiyeld] => 25000
+        )
+
+    [0x8341f6cd5b4856dec70852f4d530a6665c289043] => Array
+        (
+            [pool_defiyeld] => 11000
+        )
+
+    [0x6f15fa9582fdcf84f9f12d32f1c850775fd033ee] => Array
+        (
+            [pool_defiyeld] => 11000
+        )
+
+    [0x1474c874c00b56bb7d3a6fab336a8feb9e6f873b] => Array
+        (
+            [pool_defiyeld] => 11000
+        )
+
+    [0x0e9f6cdcafa80af5c97fe6c0e6c750860eb48ae7] => Array
+        (
+            [pool_defiyeld] => 11000
+        )
+
+    [0x9cd9fc9950871f499f3dff0573332881632d7822] => Array
+        (
+            [pool_defiyeld] => 11000
+        )
+
+    [0x710a169b822bf51b8f8e6538c63ded200932bb29] => Array
+        (
+            [pool_defiyeld] => 11036.66
+        )
+
+    [0xee74a1e81b6c55e3d02d05d7cae9fd6bcee0e651] => Array
+        (
+            [pool_defiyeld] => 11000
+            [pool_gbc] => 3000
+        )
+
+    [0xec8c50223e785c3ff21fd9f9abafacfb1e2215fc] => Array
+        (
+            [pool_defiyeld] => 16000
+        )
+
+    [0xe28d49b487c9dd7054f4d9c74629a47079641747] => Array
+        (
+            [pool_defiyeld] => 15000
+        )
+
+    [0xf33782f1384a931a3e66650c3741fcc279a838fc] => Array
+        (
+            [pool_defiyeld] => 11036.11
+            [pool_gbc] => 294
+        )
+
+    [holders] => Array
+        (
+            [pool_gbc] => holders.2022-02-08.json
+            [pool_sabai] => holders.2022-03-11.json
+            [pool_eywa] => holders.2022-03-30.json
+        )
+
+    [persent] => Array
+        (
+            [pool_gbc] => Array
+                (
+                    [1] => 0.24
+                    [2] => 0.17
+                    [3] => 0.59
+                )
+
+            [pool_sabai] => Array
+                (
+                    [1] => 0.2
+                    [2] => 0.3
+                    [3] => 0.5
+                )
+
+            [pool_eywa] => Array
+                (
+                    [1] => 0.4
+                    [2] => 0.3
+                    [3] => 0.3
+                )
+
+        )
+
+    [min] => Array
+        (
+            [pool_gbc] => Array
+                (
+                    [1] => 300
+                    [2] => 1000
+                    [3] => 3000
+                )
+
+            [pool_sabai] => Array
+                (
+                    [1] => 300
+                    [2] => 1000
+                    [3] => 3000
+                )
+
+            [pool_eywa] => Array
+                (
+                    [1] => 600
+                    [2] => 2000
+                    [3] => 5000
+                )
+
+        )
+
+    [0x093e088901909deecc1b4a1479fbcce1fbed31e7] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 300
+            [pool_eywa] => 600
+        )
+
+    [0x0c2262b636d91ec5582f4f95b40988a56496b8f1] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x184cfb6915dadb4536d397fecfa4fd8a18823719] => Array
+        (
+            [pool_gbc] => 294
+            [pool_eywa] => 600
+        )
+
+    [0x18668b0244949570ec637465bafdde4d082afa69] => Array
+        (
+            [pool_gbc] => 294
+            [pool_eywa] => 600
+        )
+
+    [0x1bdaa24527f033abbe9bc51b63c0f2a3e913485b] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 2409
+        )
+
+    [0x1d69159798e83d8eb39842367869d52be5eed87d] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x237b3c12d93885b65227094092013b2a792e92dd] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 600
+        )
+
+    [0x23d623d3c6f334f55ef0ddf14ff0e05f1c88a76f] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x2a716b58127bc4341231833e3a586582b07bbb22] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x2ae024c5ee8da720b9a51f50d53a291aca37deb1] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x2ce83785ed44961959bf5251e85af897ba9ddac7] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 304
+        )
+
+    [0x2e5f97ce8b95ffb5b007da1dd8fe0399679a6f23] => Array
+        (
+            [pool_gbc] => 294
+            [pool_sabai] => 300
+            [pool_eywa] => 600
+        )
+
+    [0x2e72d671fa07be54ae9671f793895520268ef00e] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x2f275b5bab3c35f1070edf2328cb02080cd62d7d] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x2f48e68d0e507af5a278130d375aa39f4966e452] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 600
+            [pool_eywa] => 600
+        )
+
+    [0x2fff3f5b8560407781dfcb04a068d7635a179efe] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 495
+            [pool_eywa] => 610
+        )
+
+    [0x330ec7c6afc3cf19511ad4041e598b235d44862f] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x390b07dc402dcfd54d5113c8f85d90329a0141ef] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 997
+            [pool_eywa] => 1200
+        )
+
+    [0x3a026dcc53a4bc80b4edcc155550d444c4e0ebf8] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x3ef7bf350074efde3fd107ce38e652a10a5750f5] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x42a6396437eba7bfd6b5195b7134be64443521ed] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x4460dd70a847481f63e015b689a9e226e8bd5b71] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x46f75a3e9702d89e3e269361d9c1e4d2a9779044] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 774
+        )
+
+    [0x498e96c727700a6b7ac2c4efbd3e9a5da4f0d137] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 600
+        )
+
+    [0x49e03a6c22602682b3fbecc5b181f7649b1db6ad] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x4d38c1d5f66ea0307be14017dec6a572017acfe4] => Array
+        (
+            [pool_gbc] => 294
+            [pool_eywa] => 603
+        )
+
+    [0x4f80d10339cda1edc936e15e7066c1dbbd8eb01f] => Array
+        (
+            [pool_gbc] => 294
+            [pool_eywa] => 2000
+        )
+
+    [0x523bd9c190df614f1e98611793eaa8d1a0914b8b] => Array
+        (
+            [pool_gbc] => 294
+            [pool_sabai] => 500
+            [pool_eywa] => 600
+        )
+
+    [0x55fb5d5ae4a4f8369209fef691587d40227166f6] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x57da448673afb7a06150ab7a92c7572e7c75d2e5] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x585a003aa0b446c0f9bad7b3b0bac5a809988588] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x5d10100d130467cf8dbe2b904100141f1a63318f] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x61603cd19b067b417284cf9fc94b3ebf5703824a] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x65772909024899817fb7333ec50e4b05534e3db1] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x6592ab22fad2d91c01ccb4429f11022e2595c401] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 330
+            [pool_eywa] => 660
+        )
+
+    [0x67c5a03d5769adee5fc232f2169ac5bf0bb7f18f] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x687922176d1bbcbcdc295e121bccaa45a1f40fcd] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 2409
+        )
+
+    [0x68cf193ffe134ad92c1db0267d2062d01fefdd06] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x6b745defee931ee790dfe5333446ef454c45d8cf] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x6f255406306d6d78e97a29f7f249f6d2d85d9801] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x76b2e65407e9f24ce944b62db0c82e4b61850233] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x77167885e8393f1052a8ce8d5dff2ff16c08f98d] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 600
+        )
+
+    [0x77724e749efb937ce0a78e16e1f1ec5979cba55a] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x7a4ad79c4eace6db85a86a9fa71eebd9bba17af2] => Array
+        (
+            [pool_gbc] => 294
+            [pool_eywa] => 1000
+        )
+
+    [0x7d2d2e04f1db8b54746efa719cb62f32a6c84a84] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x7ee33a8939c6e08cfe207519e220456cb770b982] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 600
+        )
+
+    [0x81cee999e0cf2da5b420a5c02649c894f69c86bd] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x826121d2a47c9d6e71fd4fed082ceccc8a5381b1] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x882bbb07991c5c2f65988fd077cddf405fe5b56f] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 300
+            [pool_eywa] => 897
+        )
+
+    [0x8ad686fb89b2944b083c900ec5ddcd2bb02af1d0] => Array
+        (
+            [pool_gbc] => 294
+            [pool_eywa] => 600
+        )
+
+    [0x931ddc55ea7074a190ded7429e82dfadfedc0269] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x94d3b13745c23fb57a9634db0b6e4f0d8b5a1053] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 300
+        )
+
+    [0x96c7fcc0d3426714bf62c4b508a0fbadb7a9b692] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0x9867ebde73bd54d2d7e55e28057a5fe3bd2027b6] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x9d1c7a6bf4258b77343f9212e2baeb9538620911] => Array
+        (
+            [pool_gbc] => 4582
+            [pool_eywa] => 2000
+        )
+
+    [0xa0f31bf73ed86ab881d6e8f5ae2e4ec9e81f04fc] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xa183b2f9d89367d935ec1ebd1d33288a7113a971] => Array
+        (
+            [pool_gbc] => 294
+            [pool_eywa] => 600
+        )
+
+    [0xa4885613ee8344e5745022b18bd4160aed4d36db] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0xa542e3cdd21841ccbcca70017101eb6a2fc68723] => Array
+        (
+            [pool_gbc] => 4583
+            [pool_sabai] => 300
+            [pool_eywa] => 2000
+        )
+
+    [0xa66a4b8461e4786c265b7abd1f5dfdb6e487f809] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 600
+        )
+
+    [0xa6700ea3f19830e2e8b35363c2978cb9d5630303] => Array
+        (
+            [pool_gbc] => 294
+            [pool_sabai] => 600
+            [pool_eywa] => 1200
+        )
+
+    [0xb14ae50038abbd0f5b38b93f4384e4afe83b9350] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xb20ce1911054de1d77e1a66ec402fcb3d06c06c2] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xb30ec70639a499af4b4040e2be7385d44009af7f] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0xb4264e181207e2e701f72331e0998c38e04c8512] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xb521154e8f8978f64567fe0fa7359ab47f7363fa] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 300
+            [pool_eywa] => 600
+        )
+
+    [0xb5c2bc605cfe15d31554c6ad0b6e0844132be3cb] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xb6a95916221abef28339594161cd154bc650c515] => Array
+        (
+            [pool_gbc] => 294
+            [pool_sabai] => 600
+            [pool_eywa] => 1000
+        )
+
+    [0xb83fc0c399e46b69e330f19baeb87b6832ec890d] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0xbd0ad704f38afebbcb4ba891389938d4177a8a92] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xbf6077d70caedf2d36e914273be8e8d4b2c5adf1] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xc03992cf3626321b81600a3457225f3f8a732837] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 633
+        )
+
+    [0xc4b1bb0c1c8c29e234f1884b7787c7e14e1bc0a1] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 500
+            [pool_eywa] => 600
+        )
+
+    [0xc60eec28b22f3b7a70fcab10a5a45bf051a83d2b] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xc64e4d5ecda0b4d8d9255340c9e3b138c846f17f] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xcb60257f43db2ae8f743c863d561528eedeaa409] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xcdcadf2195c1376f59808028ea21630b361ba9b8] => Array
+        (
+            [pool_gbc] => 293
+            [pool_eywa] => 601
+        )
+
+    [0xd05da93aea709abcc31979a63ec50f93c29999c4] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0xd0929c7f44ab8cda86502baaf9961527fc856ddc] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xde92728804683ec03efaf6c293e428fc72c2ec95] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0xdfa56e55811b6f9548f4cb876cc796a6a4071993] => Array
+        (
+            [pool_gbc] => 294
+        )
+
+    [0xdfb78f8181a5e82e8931b0faebe22cc4f94cd788] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xe088efbff6aa52f679f76f33924c61f2d79ff8e2] => Array
+        (
+            [pool_gbc] => 294
+            [pool_sabai] => 560
+            [pool_eywa] => 600
+        )
+
+    [0xe40cc4de1a57e83aac249bb4ef833b766f26e2f2] => Array
+        (
+            [pool_gbc] => 294
+            [pool_sabai] => 449
+            [pool_eywa] => 1000
+        )
+
+    [0xed08e8d72d35428b28390b7334ebe7f9f7a64822] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 300
+            [pool_eywa] => 600
+        )
+
+    [0xf6d670c5c0b206f44e93de811054f8c0b6e15905] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xf7f341c7cf5557536ebaddbe1a55dff0a4981f51] => Array
+        (
+            [pool_gbc] => 293
+            [pool_sabai] => 300
+            [pool_eywa] => 600
+        )
+
+    [0xf93b47482ecb4bb738a640ecbe0280549d83f562] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0xfb89fbafe753873386d6e46db066c47d8ef857fa] => Array
+        (
+            [pool_gbc] => 293
+        )
+
+    [0x0118838575be097d0e41e666924cd5e267cef444] => Array
+        (
+            [pool_gbc] => 1176
+            [pool_sabai] => 655
+            [pool_eywa] => 707
+        )
+
+    [0x0be82fe1422d6d5ca74fd73a37a6c89636235b25] => Array
+        (
+            [pool_gbc] => 2000
+        )
+
+    [0x204cc93aaa3d434f8db29832afa915b9628aad25] => Array
+        (
+            [pool_gbc] => 1200
+        )
+
+    [0x3a79cac51e770a84e8cb5155aaafaa9cac83f429] => Array
+        (
+            [pool_gbc] => 2962
+        )
+
+    [0x44583fe1e5904504391f4394e5ef89bac0f5d0f5] => Array
+        (
+            [pool_gbc] => 1000
+            [pool_eywa] => 2000
+        )
+
+    [0x4d35b59a3c1f59d5ff94dd7b2b3a1198378c4678] => Array
+        (
+            [pool_gbc] => 2000
+        )
+
+    [0x55e9762e2aa135584969dcd6a7d550a0faadbcd6] => Array
+        (
+            [pool_gbc] => 1100
+            [pool_sabai] => 300
+            [pool_eywa] => 600
+        )
+
+    [0x5f3e1bf780ca86a7ffa3428ce571d4a6d531575d] => Array
+        (
+            [pool_gbc] => 2962
+            [pool_sabai] => 2000
+            [pool_eywa] => 2100
+        )
+
+    [0x79440849d5ba6df5fb1f45ff36be3979f4271fa4] => Array
+        (
+            [pool_gbc] => 1000
+        )
+
+    [0x7ae29f334d7cb67b58df5ae2a19f360f1fd3be75] => Array
+        (
+            [pool_gbc] => 2300
+            [pool_eywa] => 5000
+        )
+
+    [0x80c01d52e55e5e870c43652891fb44d1810b28a2] => Array
+        (
+            [pool_gbc] => 0
+        )
+
+    [0x8d88f01d183ddfd30782e565fdbcd85c14413caf] => Array
+        (
+            [pool_gbc] => 1000
+            [pool_sabai] => 500
+            [pool_eywa] => 2000
+        )
+
+    [0x0026ec57900be57503efda250328507156dac982] => Array
+        (
+            [pool_gbc] => 4290
+        )
+
+    [0x32f8e5d3f4039d1df89b6a1e544288289a500fd1] => Array
+        (
+            [pool_gbc] => 3000
+        )
+
+    [0x35e55f287efa64dab88a289a32f9e5942ab28b18] => Array
+        (
+            [pool_gbc] => 3000
+        )
+
+    [0x3a484fc4e7873bd79d0b9b05ed6067a549ec9f49] => Array
+        (
+            [pool_gbc] => 3400
+            [pool_sabai] => 3000
+            [pool_eywa] => 5000
+        )
+
+    [0x5dfcda39199c47a962e39975c92d91e76d16a335] => Array
+        (
+            [pool_gbc] => 4290
+            [pool_eywa] => 5000
+        )
+
+    [0x871caef9d39e05f76a3f6a3bb7690168f0188925] => Array
+        (
+            [pool_gbc] => 4290
+        )
+
+    [0x99cd484206f19a0341f06228bf501abfee457b95] => Array
+        (
+            [pool_gbc] => 4290
+            [pool_sabai] => 6000
+            [pool_eywa] => 5000
+        )
+
+    [0x9f8ef2849133286860a8216ca11359381706fa4a] => Array
+        (
+            [pool_gbc] => 3153
+        )
+
+    [0xb862d5e30de97368801bdc24a53ad90f56a9c068] => Array
+        (
+            [pool_gbc] => 3028
+        )
+
+    [0xbd0aa1cf9fb2af52d6e81ef95828b0f54badf343] => Array
+        (
+            [pool_gbc] => 4290
+            [pool_eywa] => 5000
+        )
+
+    [0xbe20dfb456b7e81f691a8445d073e56602e3cefa] => Array
+        (
+            [pool_gbc] => 3000
+            [pool_eywa] => 5000
+        )
+
+    [0xcf57a3b1c076838116731fde404492d9d168747a] => Array
+        (
+            [pool_gbc] => 3000
+        )
+
+    [0xd53b873683df491553eea6a069770144ad30f3a9] => Array
+        (
+            [pool_gbc] => 3000
+            [pool_eywa] => 2000
+        )
+
+    [0xda7b5c50874a82c0262b4ea6e6001e2b002829e9] => Array
+        (
+            [pool_gbc] => 4290
+            [pool_sabai] => 3000
+            [pool_eywa] => 2000
+        )
+
+    [0xfb81414570e338e28c98417c38a3a5c9c6503516] => Array
+        (
+            [pool_gbc] => 3000
+            [pool_sabai] => 3000
+            [pool_eywa] => 5000
+        )
+
+    [data] => Array
+        (
+            [pool_sabai] => 11 march 2022
+            [pool_eywa] => 24 march 2022
+            [pool_metatg] => 7 July 2022
+            [pool_gearz] => 26 July 2022
+        )
+
+    [0x05c4c65873473c13741c31de2d74005832a0a3d8] => Array
+        (
+            [pool_sabai] => 1000
+            [pool_eywa] => 1000
+        )
+
+    [0x0f5a11bec9b124e73f51186042f4516f924353e0] => Array
+        (
+            [pool_sabai] => 500
+            [pool_eywa] => 1000
+        )
+
+    [0x6acb64a76e62d433a9bdcb4eea8343be8b3bef48] => Array
+        (
+            [pool_sabai] => 300
+        )
+
+    [0xc3ab2c2eb604f159c842d9cadabba2d6254c43d5] => Array
+        (
+            [pool_sabai] => 349
+            [pool_eywa] => 2000
+        )
+
+    [0xcc1c812774a28820e364dbcccd205c2167e56cd9] => Array
+        (
+            [pool_sabai] => 300
+            [pool_eywa] => 600
+        )
+
+    [0xceea2d354c6357ed7e10e629bd2734119a5b3c21] => Array
+        (
+            [pool_sabai] => 300
+        )
+
+    [0xe6bb1bebf6829ca5240a80f7076e4cfd6ee540ae] => Array
+        (
+            [pool_sabai] => 300
+        )
+
+    [0xfa79f7c2601a4c2a40c80ec10ce0667988b0fc36] => Array
+        (
+            [pool_sabai] => 300
+            [pool_eywa] => 1000
+        )
+
+    [0x07587c046d4d4bd97c2d64edbfab1c1fe28a10e5] => Array
+        (
+            [pool_sabai] => 2003
+        )
+
+    [0x14df5677aa90ec0d64c631621dad80b44f9deaff] => Array
+        (
+            [pool_sabai] => 1000
+        )
+
+    [0x020be4338b750b85c73e598bf468e505a8eb76ea] => Array
+        (
+            [pool_eywa] => 1100
+        )
+
+    [0x0aa05378529f2d1707a0b196b846d7963d677d37] => Array
+        (
+            [pool_eywa] => 629
+        )
+
+    [0x0bec4a34803b74d821fe49e76e59f60a00b3ca74] => Array
+        (
+            [pool_eywa] => 998
+        )
+
+    [0x0f7c9bdde8eded7c20249ee8520230ab4eb95701] => Array
+        (
+            [pool_eywa] => 1000
+        )
+
+    [0x15c8e63e9294191cb06932d468be3ecc0e0afa5f] => Array
+        (
+            [pool_eywa] => 700
+        )
+
+    [0x1eac5483377f43b34888cfa050222ef68eeaa52d] => Array
+        (
+            [pool_eywa] => 1200
+        )
+
+    [0x2230a3fa220b0234e468a52389272d239ceb809d] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x24e8afe429124e66ce3c7e20fd818fe4d43a495d] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x266eec4b2968fd655c362b1d1c5a9269cad4aa42] => Array
+        (
+            [pool_eywa] => 1571
+        )
+
+    [0x2e4c3e6f08e25de59a2be8315a2dbb4643538380] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x377a6b93ae094dad40fcc0e1f4a2a861650cc20d] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x4d3c3e7f5ebae3acbac78eff2457a842ab86577e] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x4f42f120f65a755d450706cbc0e1ac71ea024e9e] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x5929b8bd4ff4afed10948ecf41ae71b2b412c252] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x679959449b608af08d9419fe66d4e985c7d64d96] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x6e55632e9f6e245381e118beab75bf73c1d9be2e] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x718225832e5bde18cc93e418e091ea43fbe05e3d] => Array
+        (
+            [pool_eywa] => 1000
+        )
+
+    [0x773ce4a7f741e6fdf5aa349f3df041462d5b193d] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x875bf94c16000710f721cf453b948f23b7394ec2] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0x960938536f68628f378500f0dab7c262d2e3350f] => Array
+        (
+            [pool_eywa] => 665
+        )
+
+    [0xa6e00b816a04578178f5c090d9b61dbcdd3e1ac1] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0xaa504202187c620eeb0b1434695b32a2ee24e043] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0xb691a1bc1f72ce376295990643040fb1d2188990] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0xc8553643814fbe0c20f18114ee1d548fb6567d47] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0xd878a0a545dcc7751caf6d796c0267c202a957db] => Array
+        (
+            [pool_eywa] => 1000
+        )
+
+    [0xda9e6e0e7b01d384ca24ec806978e3c5faa80e08] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0xdb0d61cbfdc9dae54a8f58725001500f0611412c] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0xdcd5fd8725bb53b969908e6467da430266e38373] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0xf50e61952ac37fa5dd770657326a5fbdb18cb694] => Array
+        (
+            [pool_eywa] => 600
+        )
+
+    [0xa90ba985f7cc099c73dddb4858a810848a8ee346] => Array
+        (
+            [pool_eywa] => 2000
+        )
+
+    [0xc8e1020c45532feea0d65d7c202bc79609e21579] => Array
+        (
+            [pool_eywa] => 5500
+        )
+
+    [0x524b7c9b4ca33ba72445dfd2d6404c81d8d1f2e3] => Array
+        (
+            [pool_eywa] => 5000
+        )
+
+    [0x5555dadcb41fb48934b02a0dbf793b97541f7777] => Array
+        (
+            [pool_eywa] => 10000
+        )
+
+    [0x7701e5bf2d8ae221f23f460fe73420eee86d2872] => Array
+        (
+            [pool_eywa] => 5000
+        )
+
+    [0xcb7fbf238406502db5db0fa036ced2397f399850] => Array
+        (
+            [pool_eywa] => 5000
+        )
+
+)

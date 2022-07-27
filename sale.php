@@ -100,6 +100,22 @@ $sale[$i][funds_txt]    = "USDT";
 $sale[$i][net][matic] 	= "images/poligon.svg";
 $sale[$i][net][bsc] 	= "images/bsc.svg";
 
+
+$i = "gearz";
+$sale[$i][name] = "Gearz NFT";;
+$sale[$i][url] = "https://twitter.com/Gearz_NFT";
+$sale[$i][cap]  = 44000;
+$sale[$i][data] = "26 July 2022";
+$sale[$i][cap_txt]      = "\$ 44k";
+
+$sale[$i][funds_txt]    = "USDT";
+//$sale[$i][net][eth] 	= "images/ethereum.svg";
+$sale[$i][net][matic] 	= "images/poligon.svg";
+$sale[$i][net][bsc] 	= "images/bsc.svg";
+
+
+
+
 //$txt = json_encode($sale,192);
 //$f = "sale.json";
 //file_put_contents($f,$txt);
