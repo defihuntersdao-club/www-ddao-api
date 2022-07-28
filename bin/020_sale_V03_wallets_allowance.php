@@ -387,7 +387,7 @@ foreach($v3 as $net=>$v2)
     }
     $act = "";
 //    if($v2[balance] < 20000)
-    if($v2[balance] < 50)
+    if($v2[balance] < 10)
     $act = "no_money";
 
     if(!$act && $v2[allowance] < $v2[balance]-1)
