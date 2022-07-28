@@ -290,7 +290,7 @@ $t = $o4[$prefix."AllocSaleAmount"];
     
 $kk = $prefix."AllocSaleAmount2";
 $o4[$kk] = $t;
-$t2 = 220000;
+$t2 = 44000;
 $p = $t/$t2;
 $p *= 100;
 $p = round($p,0);
