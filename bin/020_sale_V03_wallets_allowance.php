@@ -281,8 +281,8 @@ print_r($o);
 //die;
 //die;
 $t = $o4[$prefix."AllocSaleAmount"];
-    $m = 2500;
-    //if($t >=  1000)     $m = 4000;
+    $m = 10;
+    if($t >=  99)     $m = 2500;
 //    if($t >=  55000)    $m = 2000;
 //    if($t >= 110000)    $m = 1000;
 //    if($t >= 165000)    $m = 400;
@@ -387,8 +387,8 @@ foreach($v3 as $net=>$v2)
     }
     $act = "";
 //    if($v2[balance] < 20000)
-    if($v2[balance] < 100)
-    $act = "-";
+    if($v2[balance] < 50)
+    $act = "no_money";
 
     if(!$act && $v2[allowance] < $v2[balance]-1)
     $act = "approve";
