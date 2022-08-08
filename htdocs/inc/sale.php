@@ -13,6 +13,7 @@ $case = $item2;
 
 switch($case)
 {
+    case "tmm":
     case "gearz":
     case "metatg":
     case "ddao_learn":

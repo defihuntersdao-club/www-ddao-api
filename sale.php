@@ -113,6 +113,18 @@ $sale[$i][funds_txt]    = "USDT";
 $sale[$i][net][matic] 	= "images/poligon.svg";
 $sale[$i][net][bsc] 	= "images/bsc.svg";
 
+$i = "tmm";
+$sale[$i][name] = "Take My Muffin";;
+$sale[$i][url] = "https://twitter.com/TMM66131654";
+$sale[$i][cap]  = 93500;
+$sale[$i][data] = "8 August 2022";
+$sale[$i][cap_txt]      = "\$ 93,5k";
+
+$sale[$i][funds_txt]    = "USDT";
+//$sale[$i][net][eth] 	= "images/ethereum.svg";
+$sale[$i][net][matic] 	= "images/poligon.svg";
+$sale[$i][net][bsc] 	= "images/bsc.svg";
+
 
 
 
