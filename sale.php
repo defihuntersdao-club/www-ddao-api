@@ -125,6 +125,18 @@ $sale[$i][funds_txt]    = "USDT";
 $sale[$i][net][matic] 	= "images/poligon.svg";
 $sale[$i][net][bsc] 	= "images/bsc.svg";
 
+$i = "xdao";
+$sale[$i][name] = "XDAO";;
+$sale[$i][url] = "https://www.xdao.app/";
+$sale[$i][cap]  = 25250;
+$sale[$i][data] = "26 September 2022";
+$sale[$i][cap_txt]      = "\$ 25,25k";
+
+$sale[$i][funds_txt]    = "USDT";
+//$sale[$i][net][eth] 	= "images/ethereum.svg";
+$sale[$i][net][matic] 	= "images/poligon.svg";
+$sale[$i][net][bsc] 	= "images/bsc.svg";
+
 
 
 

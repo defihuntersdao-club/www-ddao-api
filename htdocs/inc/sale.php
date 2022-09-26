@@ -13,6 +13,7 @@ $case = $item2;
 
 switch($case)
 {
+    case "xdao":
     case "tmm":
     case "gearz":
     case "metatg":
@@ -106,6 +107,7 @@ switch($case)
 	{
 //	    case "metatg":
 	    case "defiyeld":
+//	    case "xdao":
 //	    case "eywa":
 	    $v .= "svg";
 	    break;
