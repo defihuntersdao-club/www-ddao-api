@@ -484,6 +484,8 @@ foreach($o[wals] as $w=>$v3)
 		    if($v)
 		    $o3[$w][$k3] .= "<img src=/images/".$levels[$ii].".png class=stake_levels>";
 
+		    if(!$o3[$w][$k3])
+		    $o3[$w][$k3] = "-";
 	    break;
 	
 	    case "stake":

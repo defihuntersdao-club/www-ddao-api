@@ -15,6 +15,7 @@ $t = pathinfo($ref);
 //print_r($t);
 //print $ref;
 $domen[] = "https://app-test.defihuntersdao.club/";
+$domen[] = "https://app-test2.defihuntersdao.club/";
 $domen[] = "https://app.defihuntersdao.club/";
 $domen[] = "https://dbayc.defihuntersdao.club/";
 
