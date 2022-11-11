@@ -488,7 +488,7 @@ foreach($o[wals] as $w=>$v3)
 		    if($v)
 		    $o3[$w][$k3] .= "<img src=/images/".$levels[$ii].".png class=stake_levels>";
 
-		    if(!$o3[$w][$k3])
+		    if(!trim($o3[$w][$k3]))
 		    $o3[$w][$k3] = "-";
 	    break;
 	
@@ -510,7 +510,15 @@ foreach($o[wals] as $w=>$v3)
 			    $t = $o[StakeTime] + $vv;
 			    if(time()>=$t)$t = "Already";
 //			    else $t = ($t - time())." sec";
-			    else $t = ceil(($t - time())/60)." min";
+			    else 
+			    {
+			    $t = floor(($t - time())/60);
+			    $tn = "min";
+			    if($t>60){$t = ceil($t/60);$tn = "hour(s)";}
+//			    if($t>24){$t = ceil($t/24);$tn = "days(s)";}
+
+			    $t = "~".$t." ".$tn;
+			    }
 			    $o3[$w][$prefix."wait"] = $t;
 			    $t = $o[StakeTime];
 			    $t /= 60;
