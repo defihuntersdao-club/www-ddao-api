@@ -1,0 +1,1 @@
+add rw rules for this dir to all
