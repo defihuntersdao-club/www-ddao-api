@@ -260,6 +260,7 @@ foreach($mas as $v2)
 
 //$o[$w][addr_contract] = $contractAddress;
 $o[$w][addr_contract] = $addr_contract[$w];
+$o[$w][addr_ddao] = $tkn;
 $o[$w][addr_addao] = $tkn2;
 //$o[$w][time] = date("Y-m-d H:i:s");
 
