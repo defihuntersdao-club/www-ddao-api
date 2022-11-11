@@ -18,6 +18,8 @@ $a = file_get_contents($f);
 $contractAddress = $a;
 print "Contract address: ".$contractAddress."\n";
 
+//$o3[$w
+
 unset($t,$v);
 $b = "0xc2cba306";
 //$t2 = substr($w,2);
@@ -388,7 +390,7 @@ if(count($jss))
 {
 $mas = curl_mas($jss,$rpc,1);
 }
-print_r($mas);
+//print_r($mas);
 foreach($mas as $v2)
 {
     $t = $v2[id];
@@ -440,6 +442,8 @@ foreach($o[wals] as $w=>$v3)
 {
                     $k3 = $prefix."levels";                                                                                                                                                 
                     $o3[$w][$k3] = " ";      
+		    $o3[$w][$prefix."contract"] = $contractAddress;
+
     foreach($v3 as $k2=>$v)
     {
 	$k = "";
@@ -557,13 +561,15 @@ foreach($o3 as $w=>$v2)
     $t = pathinfo(__FILE__);                                                                                                                                                                
     $f = $cache_dir."tmp/".$w.".".$t[filename].".json";                                                                                                                                     
     $a = @file_get_contents($f);                                                                                                                                                            
-//    if(file_exists($f))                                                                                                                                                                   
+//    if(file_exists($f))    print "File exists: $f\n";
 //print $f."\n";                                                                                                                                                                            
-//print "md5(a) = ".md5($a)."\n";                                                                                                                                                           
-//print $a;                                                                                                                                                                                 
-//print "\nmd5(t) = ".md5($txt)."\n";                                                                                                                                                       
-//print $txt."\n";                                                                                                                                                                          
-                                                                                                                                                                                            
+if(0)
+{
+print "md5(a) = ".md5($a)."\n";                                                                                                                                                           
+print $a;                                                                                                                                                                                 
+print "\nmd5(t) = ".md5($txt)."\n";                                                                                                                                                       
+print $txt."\n";
+}                                                                                                                                                                                            
     if(md5($a) != md5($txt))                                                                                                                                                                
     {                                                                                                                                                                                       
     file_put_contents($f,$txt);                                                                                                                                                             
