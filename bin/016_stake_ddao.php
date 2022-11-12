@@ -423,9 +423,9 @@ foreach($mas as $v2)
 		if($t4[utime])
 		{
 		$t4[time] = date("Y-m-d H:i:s",$t4[utime]);
-		$t4[sec] = time()-$t4[utime];
-		$t4[min] = floor($t4[sec]/60);
-		$t4[hour] = floor($t4[min]/60);
+		//$t4[sec] = time()-$t4[utime];
+		//$t4[min] = floor($t4[sec]/60);
+		//$t4[hour] = floor($t4[min]/60);
 		}
 
 	    $o[wals][$w][$id] = $t4;
