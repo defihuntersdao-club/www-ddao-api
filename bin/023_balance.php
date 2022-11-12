@@ -65,7 +65,7 @@ while($row = mysqli_fetch_assoc($res))
 }
 print_r($wal_mas);
 
-reset($wal_mas);
+//reset($wal_mas);
 //foreach($wal_mas as $wal)
 {
 
@@ -177,6 +177,8 @@ $num = 4;
 //print "-----------------\n";print_r($jss2);
 foreach($jss2 as $net=>$jss)
 {
+//unset($balance);
+//unset($o3[$w][net][balance]);
 //print "$net\n";
 //error_reporting(65535);
 
@@ -256,6 +258,8 @@ print "NET: $net $v [$w]\n";
 	    break;
 
 	    case "balance_token":
+
+		unset($balance[$w][$net]);
 		$t = $v;
 		$t = substr($t,2);
 		$l = strlen($t)/64;
@@ -310,6 +314,7 @@ print "NET: $net $v [$w]\n";
 			$balance[$w][$net] += $tt;
 			break;
 		    }
+
 		    $o2[$w][$net][$coin][$name] = $v;
 		}
 	    break;
@@ -324,6 +329,8 @@ print "NET: $net $v [$w]\n";
 //die;
 //unset();
 //print_r($o2);die;
+//print_r($balance);die;
+//print_r($balance);
 
 foreach($o2 as $w=>$v4)
 {
@@ -349,6 +356,7 @@ foreach($v4 as $net=>$v3)
     $t = floor($t*1000)/1000;
     $o3[$w][$net][$coin_name[$net]][balance] = $t." [".$o3[$w][$net][$coin_name[$net]][balance_coin]." ".$coin_name[$net]."]";
     $balance[$w][$net] += $t;
+//print "T: $t\n";
 
     foreach($v3 as $addr => $v2)
     {
@@ -357,7 +365,7 @@ foreach($v4 as $net=>$v3)
 }
 }
 //print_r($o3);die;
-//print_r($balance);die;
+//print_r($balance);
 
 foreach($balance as $w=>$v3)
 foreach($v3 as $net=>$v2)
@@ -409,7 +417,7 @@ foreach($o4 as $w=>$v2)
 //$o[result][$item] = $o3;
 //print_r($o3);
 //die;
-for($i=0;$i<6;$i++)
+for($i=0;$i<3;$i++)
 {
     print ".";
     sleep(1);
