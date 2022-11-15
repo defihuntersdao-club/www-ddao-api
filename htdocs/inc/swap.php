@@ -1,6 +1,6 @@
 <?php
 
-print "<pre>";
+//print "<pre>";
 $w = $item2;
 
 //print_r($var_query);
@@ -12,8 +12,22 @@ $nums[1] = "usdt";
 $nums[2] = "dai";
 foreach($t as $n=>$v)
 {
-    if($v>0)
+//    if($v>0)
     $amounts[$nums[$n]] = $v;
+}
+
+function decimals($coin)
+{
+    switch($coin)
+    {
+	case "usdt":
+	case "usdc":
+	$o = 6;
+	break;
+	default:
+	$o = 18;
+    }
+    return $o;
 }
 //print_r($t);
 //$t = $item3;
@@ -25,6 +39,36 @@ $rpc = $rpc_mas[matic];
 $contract = "0x1908e11f43D70F780F2790cA3Db8d9b8164465Fe";
 $contract = "0xF051B6AE3e51E456134dE1CD66a784d4f6f792c7";
 $a = "0x137bD6F0C5055dE30934FD0278641aF98DE47D23";
+$a = "0xDBBA9F5372Ced8fc1Fda5669d13F2a23D446267d";
+$a = "0xca4f9cb94E73569e5069388D33756905528A1ea6";
+$a = "0xE6bDEF88781A9864a2958F97cea044Ba8dB1209a";
+$a = "0x87ded972eDcB9aEbc161018D2529FBBFAa4f3A03";
+$a = "0x5cb435C6a3e38B9Cb4848495546FDad209AC7f52";
+$a = "0xe33912aC643E54e5e2834531734Cb65864C9BCd3";
+$a = "0xfA04C0BA0707608472a756558e7D1605Cca78D48";
+$a = "0x2BFA8deE226246b45cb0b416A65050f74888f37A";
+$a = "0xBF8ac643Fea62910D1d2fA9ae5049CEe6A76aa05";
+$a = "0x3e3a6721293d2eb25d5C3CdcA1CEF1006A531c78";
+$a = "0xCb7B3ff495456a489b724AB8248a5E009FD85567";
+$a = "0xEff30a0e1B7D404aa7DbD7e6e31d6dDe1dFE4042";
+$a = "0x4Cb1aacFC7d6aD8F1fa99CAb3554fFC16C48b10B";
+$a = "0x37498FF209FEe42D4ce4e3cdf24081644772EBb5";
+$a = "0xeF1365166832aa2256920b93583f42d81D879439";
+$a = "0x149Cc2da81625da172B04E7647D17B66ef885963";
+$a = "0x0aEFc83570dEfBEd8bE28A897c71aB5a342063cE";
+$a = "0x918294145B18Ae868b00efa4b7AFe3c3869b8A27";
+$a = "0x33C14A6686353442f282321Fa6aFd1FcE766496A";
+$a = "0xb9CC2bC73AEcC705Bf7346b32710D6b286aB0bB9";
+$a = "0xd0b123cF3c2E2d7b6C49186ef43c96Ed94386020";
+$a = "0x759BafaAAE3B0571DEd22E1EA700fdaD376fb46c";
+$a = "0x88b752854b948e79fEdeB491E78235A11C680a30";
+$a = "0x3265B3DdC9E3394E7cA01dD5Cc21BA98a98dB57E";
+$a = "0x394457FC5164474d7A42e9aCaA8b37792404C48C";
+$a = "0x967670A00ca38826A551Fe0e7a13Ea47049552E2";
+$a = "0x4F9196D325A1cDEBa066d74DB01Af2615717d8f1";
+$a = "0x4F4a59b20BD8C670cBe4E066bf30024dA8a62801";
+$a = "0x60486a16183aee735e672A33469d4Aa270c6b437";
+//$a = "0xB78DE295b26d54969A6581A4944e61860A93F520";
 $contract = $a;
 
 
@@ -110,64 +154,27 @@ foreach($o3 as $coin=>$v2)
 // print_r($o2);
 unset($jss);
 //print_r($amounts);
-$b = "0x8bb3af21";
-$factory = "0x1b02da8cb0d097eb8d57a175b88c7d8b47997506";
-$t = $factory;
-$t = substr($t,2);
-$t = view_number($t,64,"0");
-$b .= $t;
+$b = "0x86bd0c12";
+//$factory = "0x1b02da8cb0d097eb8d57a175b88c7d8b47997506";
 
-$b .= "00000000000000000000000000000000000000000000000000000000000000a0";
-$kolvo = count($amounts);
-switch($kolvo)
-{
-    case "1":
-    $t = "00000000000000000000000000000000000000000000000000000000000000e0";
-    break;
-
-    case "2":
-    $t = "0000000000000000000000000000000000000000000000000000000000000100";
-    break;
-    case "3":
-    $t = "0000000000000000000000000000000000000000000000000000000000000120";
-    break;
-}
-$b .= $t;
-
-$t = "0000000000000000000000007ceb23fd6bc0add59e62ac25578270cff1b9f619";
-$b .= $t;
-$t = "00000000000000000000000090f3edc7d5298918f7bb51694134b07356f7d0c7";
-$b .= $t;
-$t = $kolvo;
-$t = dechex($kolvo);
-$t = view_number($t,64,"0");
-$b .= $t;
-reset($amounts);
-unset($b1,$b2);
 foreach($amounts as $coin=>$v)
 {
-    $t = $tkns[$coin];
-    $t = substr($t,2);
-    $t = view_number($t,64,"0");
-    $b1 .= $t;
-
-//print $v." ".(10**$o3[$coin][decimal])."\n";
-    $t = gmp_mul($v, 10**$o3[$coin][decimal]);
+$t = $v;
+//print $t."\t";
+//$t = gmp_mul($t,10**decimals($coin));
+//print $t."\t";
+$t = dechex($t);
+//print $t."\t";
+//print "\n";
+//$t = gmp_dechex($t);
+//print "$coin: $v ".decimals($coin)."\n";
 //print $t."\n";
-//    $t = gmp_dechex($t);
-    $t = dechex($t);
-//print $t."\n";
-    $t = view_number($t,64,"0");
-    $b2 .= $t;
-}
-$b .= $b1;
-
-$t = $kolvo;
-$t = dechex($kolvo);
+//$t *= 10**decimals($coin);
+//$t = 
+//$t = substr($t,2);
 $t = view_number($t,64,"0");
 $b .= $t;
-
-$b .= $b2;
+}
 //print $b."\n";
 
 unset($t2,$v);
@@ -186,19 +193,25 @@ $v[params][1] = "latest";
 //$v[id] = $net."-".$n."-$pair-$name";
 $v[id] = "calc";
 $jss[] = $v;
+
+//print_r($jss);
+
 $mas = curl_mas2($jss,$rpc,0);
-print_r($mas);
+//print_r($mas);
+
 $t = $mas[0][result];
 $t = substr($t,2+64*2);
 $l = strlen($t)/64;
 for($i=0;$i<$l;$i++)
 {
     $t2 = substr($t,$i*64,64);
-    print $i."\t".$t2."\n";
+    $t3 = hexdec($t2);
+    $t31 = $t3 / 10**18;
+//    print $i."\t".$t2."\t$t3\t$t31\n";
     $t4[$i] = $t2;
 }
 //print_r($t4);
-$m = count($t4)-1;
+$m = count($t4)-3;
 $t = $t4[$m];
 $t = hexdec($t);
 $t /= 10**18;
