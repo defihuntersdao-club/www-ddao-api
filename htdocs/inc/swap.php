@@ -1,7 +1,12 @@
 <?php
 
+$d = __DIR__;
+$d = dirname($d);
+$cache_dir = $d."/cache/";
 //print "<pre>";
 $w = $item2;
+
+
 
 //print_r($var_query);
 $t = $_GET["a"];
@@ -16,6 +21,22 @@ foreach($t as $n=>$v)
     $amounts[$nums[$n]] = $v;
 }
 
+$t = serialize($nums);
+$t = md5($t);
+$cache_file = $cache_dir."$item.$w.$t";
+
+$ftime = filemtime($cache_file);
+
+if(file_exists($ftime) && $ftime > time()-10)
+{
+    $a = file_get_contents($cache_file);
+    $o2 = json_decode($a);
+    
+}
+else
+{
+
+/*
 function decimals($coin)
 {
     switch($coin)
@@ -29,6 +50,7 @@ function decimals($coin)
     }
     return $o;
 }
+*/
 //print_r($t);
 //$t = $item3;
 //print "T: $t\n";
@@ -68,6 +90,7 @@ $a = "0x967670A00ca38826A551Fe0e7a13Ea47049552E2";
 $a = "0x4F9196D325A1cDEBa066d74DB01Af2615717d8f1";
 $a = "0x4F4a59b20BD8C670cBe4E066bf30024dA8a62801";
 $a = "0x60486a16183aee735e672A33469d4Aa270c6b437";
+$a = "0xeC85aa35F66b25426B1a988b90D91e73825ed9c7";
 //$a = "0xB78DE295b26d54969A6581A4944e61860A93F520";
 $contract = $a;
 
@@ -217,6 +240,10 @@ $t = hexdec($t);
 $t /= 10**18;
 $t = floor($t*100)/100;
 $o2[buy_swap] = $t;
+
+$txt = json_encode($o2,192);
+file_put_contents($cache_file,$txt);
+}
 
 $o[result] = $o2;
 ?>
