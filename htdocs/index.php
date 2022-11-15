@@ -6,8 +6,10 @@ include "../conf.php";
 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 if(in_array($ip,$debug_ip))$debug = 1;
 
-$debug_file = "/tmp/api_debug.txt";
-$debug = @file_get_contents($debug_file);
+//print "DEBUG: $debug\n";
+
+//$debug_file = "/tmp/api_debug.txt";
+//$debug = @file_get_contents($debug_file);
 
 
 $ref = $_SERVER[HTTP_REFERER];
@@ -19,7 +21,7 @@ $domen[] = "https://app-test2.defihuntersdao.club/";
 $domen[] = "https://app.defihuntersdao.club/";
 $domen[] = "https://dbayc.defihuntersdao.club/";
 
-if(!in_array($ref,$domen))
+if(!in_array($ref,$domen) && !$debug)
 {
     $err = "Your server not accessed";
 }
@@ -35,6 +37,9 @@ $t = $t[0];
 $t = explode("/",$t);
 $item = $t[1];
 $item2 = $t[2];
+$item3 = $t[3];
+unset($t[0]);
+$items = $t;
 $var_query = $_SERVER['QUERY_STRING'];
 
 
