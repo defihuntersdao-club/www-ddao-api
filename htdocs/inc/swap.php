@@ -30,8 +30,8 @@ $t = implode("_",$cc);
 //$t = serialize($nums);
 //$t = md5($t);
 //$cache_file = $cache_dir."$item.$w.$t.json";
-$cache_file = $cache_dir."$item.$t.json";
-
+$cache_file = $cache_dir."tmp/$item.$t.json";
+//$o[file] = $cache_file;
 $ftime = filemtime($cache_file);
 
 $flag = 1;
@@ -266,7 +266,11 @@ $jss[] = $v;
 
 //print_r($jss);
 
+$curl_time1 = microtime(true);
 $mas = curl_mas2($jss,$rpc,0);
+$curl_time2 = microtime(true)-$curl_time1;
+$o[time] = $curl_time2;
+
 //print_r($mas);
 
 foreach($mas as $v2)
