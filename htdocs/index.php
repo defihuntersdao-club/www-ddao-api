@@ -26,6 +26,8 @@ if(!in_array($ref,$domen) && !$debug)
     $err = "Your server not accessed";
 }
 
+
+
 if(!$err)
 {
 
@@ -41,6 +43,10 @@ $item3 = $t[3];
 unset($t[0]);
 $items = $t;
 $var_query = $_SERVER['QUERY_STRING'];
+
+$d = __DIR__;
+//$d = dirname($d);
+$cache_dir = $d."/cache/";
 
 
 	$inc = "inc/$item.php";
