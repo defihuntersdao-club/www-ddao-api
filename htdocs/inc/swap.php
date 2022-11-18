@@ -1,9 +1,11 @@
 <?php
 
+//print "<pre>";
+
 $d = __DIR__;
 $d = dirname($d);
 $cache_dir = $d."/cache/";
-//print "<pre>";
+
 $w = $item2;
 
 
@@ -91,9 +93,19 @@ $a = "0x4F9196D325A1cDEBa066d74DB01Af2615717d8f1";
 $a = "0x4F4a59b20BD8C670cBe4E066bf30024dA8a62801";
 $a = "0x60486a16183aee735e672A33469d4Aa270c6b437";
 $a = "0xeC85aa35F66b25426B1a988b90D91e73825ed9c7";
+$a = "0x90560D7DEDa4384cd129e40D40DB8107f670EF01";
+$a = "0xd1759e64F074C0A146652f7A75a1f03394Ef0Dfd";
+$a = "0xdE96d78C1eD99EC135173193eeFaA9443f6c9dc3";
+$a = "0x5608C0f49E21D3193d9268Bf9Cf5bA1692963670";
+$a = "0x381D0BCF610d577bc142d597Bc8632E3523b3C21";
+$a = "0x6d8c8e902CC5C0c8bA977c65005EA7A05d3B79F2";
+$a = "0x04E31c352DA1ffC6A0A83450432320dccec0eAE5";
+$a = "0x5d75668712a8f300680EEBf9d17a57CF3aae5dd2";
 //$a = "0xB78DE295b26d54969A6581A4944e61860A93F520";
 $contract = $a;
 
+$a = "0x04E31c352DA1ffC6A0A83450432320dccec0eAE5";
+$contract_read = $a;
 
 
 $tkns[usdc] = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174";
@@ -204,7 +216,7 @@ unset($t2,$v);
 //$b = "0x313ce567";
 $t2[from] = "0x0000000000000000000000000000000000000000";
 $t2[data] = $b;
-$t2[to] = $contract;
+$t2[to] = $contract_read;
 //print_r($t);
 unset($v);
 $v[jsonrpc] = "2.0";
