@@ -20,22 +20,34 @@ $nums[2] = "dai";
 foreach($t as $n=>$v)
 {
 //    if($v>0)
-    $amounts[$nums[$n]] = $v;
+    $amounts[$nums[$n]] = $v*1;
+    $cc[] = $v*1;
 }
 
-$t = serialize($nums);
-$t = md5($t);
-$cache_file = $cache_dir."$item.$w.$t";
+//print_r($t);
+//print_r($cc);
+$t = implode("_",$cc);
+//$t = serialize($nums);
+//$t = md5($t);
+//$cache_file = $cache_dir."$item.$w.$t.json";
+$cache_file = $cache_dir."$item.$t.json";
 
 $ftime = filemtime($cache_file);
 
-if(file_exists($ftime) && $ftime > time()-10)
+$flag = 1;
+//$o2[mtime] = $ftime;
+//$o2[ntime] = (time()-10);
+if(file_exists($cache_file) && $ftime > (time()-10))
 {
     $a = file_get_contents($cache_file);
-    $o2 = json_decode($a);
+    $o2 = json_decode($a,1);
+    $o2[but_ddao_cached] = 1;
     
+    $flag = 0;
+//print "==================\n";
 }
-else
+
+if($flag)
 {
 
 /*
@@ -217,6 +229,24 @@ $b .= $t;
 }
 //print $b."\n";
 
+unset($v);
+$v[jsonrpc] = "2.0";
+$v[method] = "eth_blockNumber";
+//$v[params][0] = $row[wal];
+$v[params] = array();
+//$v[params][1] = "latest";
+//$v[id] = $row[id];
+$v[id] = "blk";
+//$v[id] = "balance_".$name;
+$jss[] = $v;
+
+
+//$mas = curl_mas2($jss,$rpc,0);
+//$blk = $mas[0][result];
+
+//if()
+
+//unset($jss);
 unset($t2,$v);
 //$b = "0x313ce567";
 $t2[from] = "0x0000000000000000000000000000000000000000";
@@ -239,27 +269,50 @@ $jss[] = $v;
 $mas = curl_mas2($jss,$rpc,0);
 //print_r($mas);
 
-$t = $mas[0][result];
-$t = substr($t,2+64*2);
-$l = strlen($t)/64;
-for($i=0;$i<$l;$i++)
+foreach($mas as $v2)
 {
-    $t2 = substr($t,$i*64,64);
-    $t3 = hexdec($t2);
-    $t31 = $t3 / 10**18;
-//    print $i."\t".$t2."\t$t3\t$t31\n";
-    $t4[$i] = $t2;
-}
-//print_r($t4);
-$m = count($t4)-3;
-$t = $t4[$m];
-$t = hexdec($t);
-$t /= 10**18;
-$t = floor($t*100)/100;
-$o2[buy_swap] = $t;
+    $id = $v2[id];
 
+    switch($id)
+    {
+	case "calc";
+	    $t = $v2[result];
+	    $t = substr($t,2+64*2);
+	    $l = strlen($t)/64;
+	    for($i=0;$i<$l;$i++)
+	    {
+	        $t2 = substr($t,$i*64,64);
+	        $t3 = hexdec($t2);
+	        $t31 = $t3 / 10**18;
+		//    print $i."\t".$t2."\t$t3\t$t31\n";
+	        $t4[$i] = $t2;
+	    }
+	    //print_r($t4);
+	    $m = count($t4)-3;
+	    $t = $t4[$m];
+	    $t = hexdec($t);
+	    $t /= 10**18;
+	    $t = floor($t*100)/100;
+
+	    if($t)
+	    $o2[buy_swap] = $t;
+	    else
+	    $o2[buy_swap_zero] = $t;
+
+	break;
+	case "blk":
+	    $t = $v2[result];
+	    $t = hexdec($t);
+	    $o2[buy_swap_blk] = $t;
+	break;
+}
+
+//$o2[saved] = $cache_file;
+}
 $txt = json_encode($o2,192);
 file_put_contents($cache_file,$txt);
+//print "SAVED";
+
 }
 
 $o[result] = $o2;
