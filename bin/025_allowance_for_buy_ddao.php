@@ -96,9 +96,9 @@ $jss[] = $v;
 
 }
 
-print_r($jss);
+//print_r($jss);
 
-$mas = curl_mas2($jss,$rpc,1);
+$mas = curl_mas2($jss,$rpc,0);
 //print_r($mas);
 foreach($mas as $v2)
 {
@@ -126,7 +126,31 @@ foreach($v3 as $coin=>$v2)
 }
  print_r($o2);
 
-die;
+foreach($o2 as $w=>$v2)
+{
+    $txt = json_encode($v2,192);
+    $t = pathinfo(__FILE__);
+    $f = $cache_dir."tmp/".$w.".".$t[filename].".json";
+    $a = @file_get_contents($f);
+//    if(file_exists($f))    print "File exists: $f\n";
+//print $f."\n";
+if(0)
+{
+print "md5(a) = ".md5($a)."\n";
+print $a;
+print "\nmd5(t) = ".md5($txt)."\n";
+print $txt."\n";
+}
+    if(md5($a) != md5($txt))
+    {
+    file_put_contents($f,$txt);
+    print "Save $w\n";
+    }
+
+}
+
+
+//die;
 
 for($i=0;$i<3;$i++)
 {

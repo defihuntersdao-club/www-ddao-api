@@ -9,3 +9,4 @@
 * * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./020_sale_V03_wallets_allowance.php > 020_sale_V03_wallets_allowance.log 2>&1 
 * * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./021_sale_V03_wallets_allowance.php > 021_sale_V03_wallets_allowance.log 2>&1 
 * * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./023_balance.php > 023_balance.php.log 2>&1
+* * * * *       root    cd /www/api.defihuntersdao.club/2_test/www-ddao-api/bin/;./025_allowance_for_buy_ddao.php > 025_allowance_for_buy_ddao.log 2>&1
