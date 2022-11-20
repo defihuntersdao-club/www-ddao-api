@@ -14,12 +14,22 @@ $time = time();
 $f = "016.address";
 $a = file_get_contents($f);
 
+
 //$contractAddress = "0xe9Ee76b9B66D8f3E540e49B7Ebf64D1Ca9e37Fd8";
 $contractAddress = $a;
 print "Contract address: ".$contractAddress."\n";
 
 //$o3[$w
+$cache_file = __FILE__.".cache";
+$mtime = filemtime($cache_file);
 
+if(time() < $mtime+259)
+{
+    $a = file_get_contents($cache_file);
+    $o2 = json_decode($a,1);
+}
+else
+{
 unset($t,$v);
 $b = "0xc2cba306";
 //$t2 = substr($w,2);
@@ -64,6 +74,9 @@ $jss[] = $v;
 if(count($jss))
 {
 $mas = curl_mas($jss,$rpc,1);
+//print_r($mas);
+$log2[] = $jss;
+$log2[] = $mas;
 }
 //print_r($mas);
 foreach($mas as $v2)
@@ -160,10 +173,20 @@ foreach($mas as $v2)
     $o[$id] = $v;
 }
 $o2 = $o;
-//print_r($o);die;
+$t = json_encode($o2,192);
+file_put_contents($cache_file,$t);
+}
 
+$log2[] = $o2;
+//print_r($o);die;
+$t = date("Y-m-d-H-i-s");
+$log_prefix = __DIR__."/logs/016.$t";
 do
 {
+unset($log);
+$log = $log2;
+$log_file = $log_prefix.".log";
+
 unset($o,$o3);
 $o = $o2;
 unset($q);
@@ -388,7 +411,9 @@ $jss[] = $v;
 }
 if(count($jss))
 {
+//$log[] = $jss;
 $mas = curl_mas($jss,$rpc,1);
+//$log[] = $mas;
 }
 //print_r($mas);
 foreach($mas as $v2)
@@ -418,11 +443,14 @@ foreach($mas as $v2)
 
 	    }
 		$t4[$i2] = $t3;
+		$t41[$i] = $t3;
 	    }
+$log[t4] = $t4;
+$log[t41] = $t41;
 
-		if($t4[utime])
+		if($t4[utime]*1)
 		{
-		$t4[time] = date("Y-m-d H:i:s",$t4[utime]);
+//		$t4[time] = date("Y-m-d H:i:s",$t4[utime]);
 		//$t4[sec] = time()-$t4[utime];
 		//$t4[min] = floor($t4[sec]/60);
 		//$t4[hour] = floor($t4[min]/60);
@@ -443,6 +471,7 @@ foreach($o[wals] as $w=>$v3)
                     $k3 = $prefix."levels";                                                                                                                                                 
                     $o3[$w][$k3] = " ";      
 		    $o3[$w][$prefix."contract"] = $contractAddress;
+		    $o3[$w][$prefix."address"] = $w;
 
     foreach($v3 as $k2=>$v)
     {
@@ -543,6 +572,7 @@ foreach($o[wals] as $w=>$v3)
 		    $o3[$w][$k3] = $vv;
 		}
 	    break;
+/*
 	    case "":
 	    break;
 	    case "":
@@ -551,6 +581,7 @@ foreach($o[wals] as $w=>$v3)
 	    break;
 	    case "":
 	    break;
+*/
 	}
 	if($k)
 	{
@@ -564,7 +595,8 @@ foreach($o[wals] as $w=>$v3)
 }
 //print_r($o3);die;
 foreach($o3 as $w=>$v2)                                                                                                                                                                      
-{                                                                                                                                                                                           
+{             
+$logs[] = $o3;                                                                                                                                                                              
     $txt = json_encode($v2,192);                                                                                                                                                            
     $t = pathinfo(__FILE__);                                                                                                                                                                
     $f = $cache_dir."tmp/".$w.".".$t[filename].".json";                                                                                                                                     
@@ -579,13 +611,29 @@ print "\nmd5(t) = ".md5($txt)."\n";
 print $txt."\n";
 }                                                                                                                                                                                            
     if(md5($a) != md5($txt))                                                                                                                                                                
-    {                                                                                                                                                                                       
+    {     
+    //print_r($mas);
+    $log[] = $jss;
+    $log[] = $mas;
+    $log[] = "================== $w ==========";
+    $log[] = "----------- old --------------";
+    $log[] = $a;
+    $log[] = "================== $w ==========";
+    $log[] = $txt;
+    $log[] = 
+    $f2 = $log_prefix.".$w.log";
+//    $t = json_encode($log,192);;
+    $t = print_r($log,1);
+//    file_put_contents($log_file,$t);
+    file_put_contents($f2,$t);
+
+
     file_put_contents($f,$txt);                                                                                                                                                             
-    print "Save $w\n";                                                                                                                                                                      
+    print "Save $w\n";
+    print $txt."\n";                                                                                                                                                                      
     }                                                                                                                                                                                       
                                                                                                                                                                                             
 }                        
-
 
 //print ".";
 //sleep(1);
