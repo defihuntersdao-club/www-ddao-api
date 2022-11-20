@@ -10,6 +10,7 @@ $prefix = "buy_ddao_";
 
 $a = "0x5d75668712a8f300680EEBf9d17a57CF3aae5dd2";
 //$a = "0xB78DE295b26d54969A6581A4944e61860A93F520";
+$a = "0x70938Aabd8874457442E5ddAd1769B651E5d83b4";
 $contract = $a;
 
 
@@ -21,8 +22,8 @@ $tkns[dai]  = "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063";
 //die;
 do
 {
-unset($o,$o3);
-$o = $o2;
+unset($o,$o2,$o3);
+//$o = $o2;
 unset($q);
 unset($jss);
 unset($wal_mas);
@@ -43,7 +44,7 @@ print_r($wal_mas);
 reset($wal_mas);
 foreach($wal_mas as $w)
 {
-
+$o2[$w][$prefix."contract"] = $contract;
 reset($tkns);
 foreach($tkns as $coin=>$addr)
 {
@@ -121,7 +122,8 @@ foreach($v3 as $coin=>$v2)
     $t = $v2[allowance]/10**$v2[decimal];
     $t = gmp_div_q($v2[allowance],10**$v2[decimal]);
     $t = gmp_strval($t);
-    if($t > 1000000)$t = "&#8734;";
+//    if($t > 1000000)$t = "&#8734;";
+    if($t > 1000000)$t = "∞";
     $o2[$wal]["buy_allowance_".$coin] = $t;
 }
  print_r($o2);
