@@ -184,6 +184,7 @@ $log_prefix = __DIR__."/logs/016.$t";
 do
 {
 unset($log);
+$skip_cicle = 0;
 $log = $log2;
 $log_file = $log_prefix.".log";
 
@@ -412,10 +413,12 @@ $jss[] = $v;
 if(count($jss))
 {
 //$log[] = $jss;
+unset($mas);
 $mas = curl_mas($jss,$rpc,1);
 //$log[] = $mas;
 }
 //print_r($mas);
+unset($t3,$t4,$t41);
 foreach($mas as $v2)
 {
     $t = $v2[id];
@@ -423,6 +426,8 @@ foreach($mas as $v2)
     $w = $t[0];
     $id = $t[1];
     $v = $v2[result];
+    if(isset($v2[error]))$skip_cicle = 1;
+    if(isset($v2[error]))break;
     switch($id)
     {
 	case "stake":
@@ -465,6 +470,9 @@ $log[t41] = $t41;
 }
 //-----------------------
 //$o3[$prefix."token"] = $o[TokenName];
+
+if(!$skip_cicle)
+{
 $decimals = $o[TokenDecimals];
 foreach($o[wals] as $w=>$v3)
 {
@@ -475,6 +483,7 @@ foreach($o[wals] as $w=>$v3)
 
     foreach($v3 as $k2=>$v)
     {
+//	if(isset[])
 	$k = "";
 	switch($k2)
 	{
@@ -634,7 +643,11 @@ print $txt."\n";
     }                                                                                                                                                                                       
                                                                                                                                                                                             
 }                        
-
+}
+else
+{
+print "Found err. Skip cicle\n";
+}
 //print ".";
 //sleep(1);
 for($i=0;$i<3;$i++)                                                                                                                                                                         
