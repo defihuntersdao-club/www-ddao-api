@@ -23,7 +23,8 @@ print "Contract address: ".$contractAddress."\n";
 $cache_file = __FILE__.".cache";
 $mtime = filemtime($cache_file);
 
-if(time() < $mtime+259)
+//if(time() < $mtime+259)
+if(1)
 {
     $a = file_get_contents($cache_file);
     $o2 = json_decode($a,1);

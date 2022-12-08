@@ -258,6 +258,7 @@ foreach($mas as $v2)
     }
     $o[$w][$k] = $t;
 
+$o[$w][ddao_vesting_aviable] = $o[$w][ddao_private1_aviable]*1 + $o[$w][ddao_private1_aviable]*1 + $o[$w][ddao_seed_aviable]*1;
 //$o[$w][addr_contract] = $contractAddress;
 $o[$w][addr_contract] = $addr_contract[$w];
 $o[$w][addr_ddao] = $tkn;
