@@ -9,9 +9,9 @@ $time = time();
 
 //$a = "0xc4CD50Ab4e1a30fa0Cf2E67aEe2042Cb419a9595";
 //$a = "0xbf4389e2716918fD1ecA1AaF4942e7f37fAc1e75";
-//$contractAddress = $a;
-include "stake2_contract.php";
-$contractAddress = $stake2_contract;
+$a = "0x457280d60d23C40dbA92C00Acd3e701De040C8cb";
+
+$contractAddress = $a;
 //$contractAddress = "0x0eeca57a97928ca02a5A4b56bF1bE0D926CF3aa7";;
 print "Contract address: $contractAddress\n";
 
@@ -86,7 +86,7 @@ $jss[] = $v;
 }
 
 
-//print_r($jss);
+print_r($jss);
 unset($out);
 print "Send ".count($jss)." requests to blockchain\n";
 $t = $time;
@@ -98,7 +98,7 @@ $mas = curl_mas2($jss,$rpc,0);
 $t = time()-$t;
 print "Get data from blockchain in ".count($jss)." requests [$t sec]\n";
 
-//print_r($mas);
+print_r($mas);
 //die;
 foreach($mas as $v2)
 {
@@ -139,7 +139,7 @@ foreach($mas as $v2)
 
             break;
             default:
-                $t3 = hexdec($t2);
+                $t3 = gmp_hexdec($t2);
                 //$t3 /= 10**18;
 		$t3 = div10($t3,18,36);
 		$t31 = $t3;
@@ -161,7 +161,7 @@ foreach($mas as $v2)
 }
 foreach($t4 as $wal=>$t5)
 {
-//print_r($t5);
+print_r($t5);
 
 $rate = $t5[29];
 
