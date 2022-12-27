@@ -1,77 +1,35 @@
 <?php
-//include "conf.php";
-//include "../../vendor/autoload.php";
-//include "../../vendor_erc20/autoload.php";
-//error_reporting(65535);
-
-//print "<pre>";
-
+print "<pre>";
 $rpc = $rpc_mas[matic];
 
 //print_r($items);
-$w = $item2;
+//$w = $item2;
 
-//$t = __FILE__;
-//$t = pathinfo($t);
-//$t =  $t[filename];
-//$t = explode("_",$t);
-//$net = $t[1];
-//$sol = $t[2];
-
-//$net = "localhost";
-//$sol = "vault";
-
-//$w = $wals[nn][0];
-//$pk = $wals[wal][$w];
-//$w = "0x330ec7c6afc3cf19511ad4041e598b235d44862f";
-
-
-//$rpc = $rpc_mas[$net];
-//$chain_id = $glob[chain_id][$net];
-//$usdc = "0xBfd995F0F67C1A3772146862132C2B716E745452";
-
-//$d = __DIR__."/abi/";
-//$contractAddress = "0xfc067766349d0960bdc993806ea2e13fcfc03c4d";
-//$f = "y_contract.$net.$sol.txt";
-//print "F: $f\n";
-//$a = file_get_contents($f);
-//$a = "0x40f94039968a98053b858e0A6EE34308f7075790";
-//$a = "0x071553BBaf05799496C02A287d3416934f3bB4EA";
-//$a = "0x60352E12A1FfcdbF38c56D674E85f85C1550Ac8f";
-//$a = "0x7BF3b8dD0507e177c8d52b475B73969469B7090C";
-$a = $contracts[info];
+$a = $contracts[info2];
 $contractAddress = $a;
 //print "Contract:  $contractAddress\n";
 
-//$f = "y_contract.$net.DDAOStakingLP.txt";
-//print "F: $f\n";
-//$a = file_get_contents($f);
-//$a = "0x457280d60d23C40dbA92C00Acd3e701De040C8cb";
-//$a = "0xfA6c94860d56C59072523FDD230c06163C66ED24";
 $a = $contracts[stake2];
 $contractAddress2 = $a;
 //print "Contract2:  $contractAddress2\n";
-
-//$f = "y_contract.$net.dimple.txt";
-//$a = file_get_contents($f);
-//$contractAddress2 = $a;
-//print "Contract2: $a\n";
 
 
 //foreach($m as $name=>$b)
 {
 // StakeList:      0xf1dd12ec
     $b = "0xf1dd12ec";
+// RewardList:     0xa0d86836
+    $b = "0xa0d86836";
 
     $t = $contractAddress2;
     $t = substr($t,2);
     $t = view_number($t,64,"0");
     $b .= $t;
 
-    $t = $w;
-    $t = substr($t,2);
-    $t = view_number($t,64,"0");
-    $b .= $t;
+//    $t = $w;
+//    $t = substr($t,2);
+//    $t = view_number($t,64,"0");
+//    $b .= $t;
 
 
 
@@ -133,21 +91,26 @@ $mas = curl_mas2($jss,$rpc,0);
 $t = time()-$t;
 //print "Get data from blockchain in ".count($jss)." requests [$t sec]\n";
 
-//print_r($mas);
+//print_r($mas);die;
 
 //$keys[0] = "tkn";
 
 $keys[1]  = "nn";
-$keys[]  = "owner";
-$keys[]  = "grp";
-$keys[]  = "lp";
+$keys[]  = "tkn";
+$keys[]  = "decimals";
 $keys[]  = "amount";
-$keys[]  = "utime";
+$keys[]  = "start_time";
 $keys[]  = "interval";
-$keys[]  = "closed";
-$keys[]  = "closed_time";
-$keys[]  = "claim_time";
-$keys[]  = "claimed";
+$keys[]  = "stoped";
+$keys[]  = "hidden";
+$keys[]  = "exited";
+$keys[]  = "owner";
+$keys[]  = "stoped_time";
+$keys[]  = "hidden_time";
+$keys[]  = "koef1";
+$keys[]  = "koef2";
+$keys[]  = "koef3";
+$keys[]  = "abbr";
 //print_r($keys);
 
 $num = count($keys);
@@ -160,35 +123,47 @@ $v = $mas[0][result];
             for($i=0;$i<$l;$i++)
             {
                 $t2 = substr($t,$i*64,64);
-                $i2 = $i-7;
+                $i2 = $i-3;
                 if($i2>=0)
                 $nn = ($i2/$num - floor($i2/$num))*$num + 1;
                 $nn .= "";
 
-                switch($nn)
+                switch($keys[$nn])
                 {
-                    case "2":
-                    case "4":
+                    case "tkn":
+                    case "owner":
                         $t3 = "0x".substr($t2,24);
                     break;
-                    case "-1":
-                    $t3 = hexdec($t2);
-                    $t3 /= 10**18;
+                    case "amount":
+                    $t3 = gmp_hexdec($t2);
+		    $t3 = gmp_strval($t3);
+                    $t3 /= 10**$o3[$id][decimals];
                     break;
                     case "-15":
                     $t3 = hexdec($t2);
                         if($t3)
                         $t3 .= " ".date("Y-m-d H:i:s",$t3);
                     break;
+		    case "abbr":
+			$c = "";
+			for($i2=0;$i2<32;$i2++)
+			{
+			    $t3 = substr($t2,$i2*2,2);
+			    if($t3 == "00")break;
+			    $t3 = hexdec($t3);
+			    $c .= chr($t3);
+			}
+			$t3 = $c;
+		    break;
                     default:
                     $t3 = hexdec($t2);
                 }
                 if($i==1)$step = $t3;
                 if($i==2)$update_time = $t3;
                 if($i==3)$AdminUnstakeAllow = $t3;
-                if($i==4)$amount_all[1] = $t3;
-                if($i==5)$amount_all[2] = $t3;
-                if($i==6)$amount_all[3] = $t3;
+//                if($i==4)$amount_all[1] = $t3;
+//                if($i==5)$amount_all[2] = $t3;
+//                if($i==6)$amount_all[3] = $t3;
                 $nn2 = $keys[$nn];
                 if($nn2 == "nn")$id = $t3;
 //          $tt = ($i/2 - floor($i/2))*2;
@@ -210,7 +185,10 @@ $v = $mas[0][result];
                 }
 
             }
+//print_r($o3);
 
+/*
+die;
 
 $grps[1] = "lp_matic_sushi_ddao";
 $grps[2] = "lp_matic_sushi_gnft";
@@ -261,17 +239,6 @@ reset($grps);
 foreach($grps as $grp=>$g)
 {
     $a = $amount[$grp];
-/*
-    $t = bcdiv($a,10**18,18);
-    $t = strrev($t);
-    $l = strlen($t);
-    for($i=0;$i<$l;$i++)
-    {
-	if($t[$i]=="0")$t[$i] = "";
-	else break;
-    }
-    $t = strrev($t);
-*/
 //    $html[$grps[$grp]."_wal_lp_bal_staked"] = bcdiv($a,10**18,18);
     $k = $g."_wal_lp_bal_staked";
     $v = 0;
@@ -316,6 +283,7 @@ foreach($grps as $grp=>$g)
     $k = $g."_all";
     $html[$k] = $v;
 }
+*/
 $nn=0;
 krsort($o3);
 foreach($o3 as $v2)
@@ -327,9 +295,9 @@ foreach($o3 as $v2)
 $o[result]["list"] = $o4;
 $o[result]["list_length"] = count($o4);
 $o[result]["contract_update_utime"] = $update_time*1;
-$o[result]["wallet"] = $w;
-$o[result]["AdminUnstakeAllow"] = $AdminUnstakeAllow;
-$o[result][html] = $html;
+//$o[result]["wallet"] = $w;
+//$o[result]["AdminUnstakeAllow"] = $AdminUnstakeAllow;
+//$o[result][html] = $html;
 //$o[result][amount_count] = $amount_count;
 //print_r($o3);
 //print_r($amount2);

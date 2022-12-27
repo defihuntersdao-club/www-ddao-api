@@ -12,7 +12,7 @@ $prefix = "stake2_";
 //$contract = $a;
 include "stake2_contract.php";
 $contract = $stake2_contract;
-
+print "Contract: $contract\n";
 
 
 $tkns[lp_ddao_weth] = "0xfC067766349d0960bdC993806EA2E13fcFC03C4D";

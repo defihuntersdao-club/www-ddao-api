@@ -20,5 +20,6 @@ $curl1 = "curl --connect-timeout 4 -H 'content-type: application/json' -X POST -
 
 
 include __DIR__."/sale.php";
+include __DIR__."/contracts.php";
 
 ?>
