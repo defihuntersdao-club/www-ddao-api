@@ -1,5 +1,5 @@
 <?php
-print "<pre>";
+//print "<pre>";
 $rpc = $rpc_mas[matic];
 
 //print_r($items);
