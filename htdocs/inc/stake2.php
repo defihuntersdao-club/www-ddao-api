@@ -39,7 +39,7 @@ $w = $item2;
 //$a = "0x071553BBaf05799496C02A287d3416934f3bB4EA";
 //$a = "0x60352E12A1FfcdbF38c56D674E85f85C1550Ac8f";
 //$a = "0x7BF3b8dD0507e177c8d52b475B73969469B7090C";
-$a = $contracts[info];
+$a = $contracts[info2];
 $contractAddress = $a;
 //print "Contract:  $contractAddress\n";
 
@@ -147,7 +147,7 @@ $keys[]  = "interval";
 $keys[]  = "closed";
 $keys[]  = "closed_time";
 $keys[]  = "claim_time";
-$keys[]  = "claimed";
+//$keys[]  = "claimed";
 //print_r($keys);
 
 $num = count($keys);

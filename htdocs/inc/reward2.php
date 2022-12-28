@@ -101,6 +101,7 @@ $keys[]  = "decimals";
 $keys[]  = "amount";
 $keys[]  = "start_time";
 $keys[]  = "interval";
+$keys[]  = "end_time";
 $keys[]  = "stoped";
 $keys[]  = "hidden";
 $keys[]  = "exited";
@@ -110,7 +111,9 @@ $keys[]  = "hidden_time";
 $keys[]  = "koef1";
 $keys[]  = "koef2";
 $keys[]  = "koef3";
+$keys[]  = "claimed";
 $keys[]  = "abbr";
+
 //print_r($keys);
 
 $num = count($keys);
@@ -134,6 +137,7 @@ $v = $mas[0][result];
                     case "owner":
                         $t3 = "0x".substr($t2,24);
                     break;
+                    case "claimed":
                     case "amount":
                     $t3 = gmp_hexdec($t2);
 		    $t3 = gmp_strval($t3);
