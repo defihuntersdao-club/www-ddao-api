@@ -39,7 +39,7 @@ $t = substr($t,2);
 $t = view_number($t,64,0);
 $b .= $t;
 
-$t = 1;
+$t = 2;
 $t = dechex($t);
 //$t = substr($t,2);
 //$t = substr($w,2);
