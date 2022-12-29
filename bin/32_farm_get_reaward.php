@@ -5,7 +5,11 @@ include "conf.php";
 print date("Y-m-d H:i:s\n");
 $time = time();
 
-$nn = $argv[1];
+$num = $argv[1];
+$num *= 1;
+if(!$num)$num = 1;
+
+$nn = $argv[2];
 $nn *= 1;
 if(!$nn)$nn = 1;
 
@@ -39,13 +43,16 @@ $b = "0x9126e536";
 // ClaimList3:     0xe8e20fbe
 $b = "0xe8e20fbe";
 //$t = "0x3a434BBF72AF14Ae7cBf25c5cFA19Afe6A25510c";
-$t = $contracts[stake2];
-$t = substr($t,2);
-//$t = substr($w,2);
-$t = view_number($t,64,0);
-$b .= $t;
+// RewardNumByAddr:        0x493942f6
+$b = "0x493942f6";
 
-$t = $nn;
+//$t = $contracts[stake2];
+//$t = substr($t,2);
+//$t = substr($w,2);
+//$t = view_number($t,64,0);
+//$b .= $t;
+
+$t = $num;
 $t = dechex($t);
 //$t = substr($t,2);
 //$t = substr($w,2);
@@ -58,9 +65,25 @@ $t = substr($t,2);
 $t = view_number($t,64,0);
 $b .= $t;
 
+$t = $nn;
+$t = dechex($t);
+//$t = substr($t,2);
+//$t = substr($w,2);
+$t = view_number($t,64,0);
+$b .= $t;
+
+$t = 0;
+$t = dechex($t);
+//$t = substr($t,2);
+//$t = substr($w,2);
+$t = view_number($t,64,0);
+$b .= $t;
+
+
+
 $t2[from] = "0x0000000000000000000000000000000000000000";
 $t2[data] = $b;
-$t2[to] = $contracts[info2];
+$t2[to] = $contracts[stake2];
 //print_r($t);
 unset($v);
 $v[jsonrpc] = "2.0";
@@ -69,7 +92,7 @@ $v[method] = "eth_call";
 $v[params][0] = $t2;
 $v[params][1] = "latest";
 //$v[id] = $row[id];
-$v[id] = "rew_".$wal;
+$v[id] = "rew_".$wal."_".$num."_".$nn;
 $jss[] = $v;
 }
 print_r($jss);
