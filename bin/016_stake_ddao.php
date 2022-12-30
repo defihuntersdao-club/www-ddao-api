@@ -11,9 +11,9 @@ print date("Y-m-d H:i:s\n");
 
 $time = time();
 
-$f = "016.address";
-$a = file_get_contents($f);
-
+//$f = "016.address";
+//$a = file_get_contents($f);
+$a = $contracts[stake];
 
 //$contractAddress = "0xe9Ee76b9B66D8f3E540e49B7Ebf64D1Ca9e37Fd8";
 $contractAddress = $a;

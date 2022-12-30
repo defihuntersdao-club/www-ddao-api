@@ -12,6 +12,9 @@ $time = time();
 $contractAddress_mas[addao] 	= "0xCA1931C970CA8C225A3401Bb472b52C46bBa8382";
 $contractAddress_mas[vesting] 	= "0xa9a2d6b16f3dd4c145aa8c875b9ceb8cda3022e3";
 $contractAddress_mas[gnft]	= "0xE58e8391BA17731C5671F9c6E00e420608Dca10e";
+$contractAddress_mas[stddao]	= $contracts[stake];
+$contractAddress_mas[lpddao]	= $contracts[stake2];
+$contractAddress_mas[summary]	= "0x4f562325be0BdA2c14164a1EF9018f8B727ddB9C";
 //$contractAddress = "0x0eeca57a97928ca02a5A4b56bF1bE0D926CF3aa7";;
 //print "Contract address: $contractAddress\n";
 

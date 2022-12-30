@@ -15,6 +15,9 @@ $nn = $argv[2];
 $nn *= 1;
 if(!$nn)$nn = 1;
 
+do
+{
+unset($o,$o2,$o3);
 unset($wal_mas);
 $q[] = "SELECT * FROM address WHERE ymdhi = '".date("YmdHi",time())."'";
 $q[] = "SELECT * FROM address WHERE ymdhi = '".date("YmdHi",time()-60)."'";
@@ -247,11 +250,14 @@ $jss[] = $v;
 }
 }
 }
-print_r($jss);
+//print_r($jss);
 //die;
 $mas = curl_mas2($jss,$rpc,0);
 //print_r($mas);
 //die;
+$kolvo = count($mas);
+if($kolvo)
+{
 foreach($mas as $v2)
 {
     $id = $v2[id];
@@ -310,6 +316,16 @@ print $txt."\n";
     }
 
 }
+//if()
+for($i=0;$i<8;$i++)
+{
+    print ".";
+    sleep(1);
+}
+}
+
+}
+while(time() < ($time+59));
 
 
 ?>
