@@ -139,10 +139,17 @@ foreach($mas as $v2)
 
             break;
             default:
-                $t3 = hexdec($t2);
+                $t3 = gmp_hexdec($t2);
+                $t3 = gmp_strval($t3);
+                $t3 = bcdiv($t3,10**18,18);
+                $t31 = $t3."|";
+                $t3 = preg_replace("/([0]{1,18})\|/si","",$t31);
+                $l31 = strlen($t3);
+                if($t3[$l31-1]==".")$t3 = substr($t3,0,$l31-1);
+                $t3 = str_replace("|","",$t3);
                 //$t3 /= 10**18;
-		$t3 = div10($t3,18,36);
-		$t31 = $t3;
+                //$t3 = div10($t3,18,36);
+                $t31 = $t3;
         }
 
 	$t4[$w][$i] = $t31;

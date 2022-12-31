@@ -65,7 +65,7 @@ $t = substr($t,2);
 $t = view_number($t,64,0);
 $b .= $t;
 
-$t = 0;
+$t = 1;
 $t = view_number($t,64,0);
 $b .= $t;
 
@@ -140,16 +140,16 @@ foreach($mas as $v2)
             break;
             default:
                 $t3 = gmp_hexdec($t2);
-                $t3 = gmp_strval($t3);
-                $t3 = bcdiv($t3,10**18,18);
-                $t31 = $t3."|";
-                $t3 = preg_replace("/([0]{1,18})\|/si","",$t31);
-                $l31 = strlen($t3);
-                if($t3[$l31-1]==".")$t3 = substr($t3,0,$l31-1);
-                $t3 = str_replace("|","",$t3);
+		$t3 = gmp_strval($t3);
+		$t3 = bcdiv($t3,10**18,18);
+		$t31 = $t3."|";
+		$t3 = preg_replace("/([0]{1,18})\|/si","",$t31);
+		$l31 = strlen($t3);
+		if($t3[$l31-1]==".")$t3 = substr($t3,0,$l31-1);
+		$t3 = str_replace("|","",$t3);
                 //$t3 /= 10**18;
-                //$t3 = div10($t3,18,36);
-                $t31 = $t3;
+		//$t3 = div10($t3,18,36);
+		$t31 = $t3;
         }
 
 	$t4[$w][$i] = $t31;
@@ -166,6 +166,7 @@ foreach($mas as $v2)
 //    print $t."\t";
 //    print "\n";
 }
+print_r($t4);
 foreach($t4 as $wal=>$t5)
 {
 //print_r($t5);
@@ -173,16 +174,16 @@ foreach($t4 as $wal=>$t5)
 $rate = $t5[29];
 
 $t = $t5[6];
-$o2[$wal][lp_matic_sushi_ddao_wal_lp_bal_full] = $t;
-$o2[$wal][lp_matic_sushi_ddao_wal_lp_bal_full25] = bcmul($t,0.25,18);
-$o2[$wal][lp_matic_sushi_ddao_wal_lp_bal_full50] = bcmul($t,0.5,18);
-$o2[$wal][lp_matic_sushi_ddao_wal_lp_bal_full75] = bcmul($t,0.75,18);
+$o2[$wal][lp_matic_sushi_ddao_wal_lp_staked_full] = $t;
+//$o2[$wal][lp_matic_sushi_ddao_wal_lp_staked_full25] = bcmul($t,0.25,18);
+//$o2[$wal][lp_matic_sushi_ddao_wal_lp_staked_full50] = bcmul($t,0.5,18);
+//$o2[$wal][lp_matic_sushi_ddao_wal_lp_staked_full75] = bcmul($t,0.75,18);
 
 $tt = explode(".",$t);
 $tt = $tt[1];
 $tt = strlen($tt);
 $tt = "0.".view_number(1,$tt,"0");
-$o2[$wal][lp_matic_sushi_ddao_wal_lp_step] = $tt;
+//$o2[$wal][lp_matic_sushi_ddao_wal_lp_step] = $tt;
 
 /*
 if($t)
@@ -193,62 +194,61 @@ $t = substr(($t*1000),0,7)." m";
 }
 }
 */
-$o2[$wal][lp_matic_sushi_ddao_wal_lp_bal] = $t;
+$o2[$wal][lp_matic_sushi_ddao_wal_lp_staked] = $t;
 
 $t = $t5[11];
 
 $t = round($t,2);
-$o2[$wal][lp_matic_sushi_ddao_wal_lp_bal_usd] = $t;
+$o2[$wal][lp_matic_sushi_ddao_wal_lp_staked_usd] = $t;
 
 $t = $t5[11] / $rate;
 $t = round($t,2);
-$o2[$wal][lp_matic_sushi_ddao_wal_lp_bal_ddao] = $t;
+$o2[$wal][lp_matic_sushi_ddao_wal_lp_staked_ddao] = $t;
 
 
 //-------------------------------
 $t = $t5[14];
-$o2[$wal][lp_matic_sushi_gnft_wal_lp_bal_full] = $t;
-$o2[$wal][lp_matic_sushi_gnft_wal_lp_bal_full25] = bcmul($t,0.25,18);
-$o2[$wal][lp_matic_sushi_gnft_wal_lp_bal_full50] = bcmul($t,0.5,18);
-$o2[$wal][lp_matic_sushi_gnft_wal_lp_bal_full75] = bcmul($t,0.75,18);
+$o2[$wal][lp_matic_sushi_gnft_wal_lp_staked_full] = $t;
+//$o2[$wal][lp_matic_sushi_gnft_wal_lp_staked_full25] = bcmul($t,0.25,18);
+//$o2[$wal][lp_matic_sushi_gnft_wal_lp_staked_full50] = bcmul($t,0.5,18);
+//$o2[$wal][lp_matic_sushi_gnft_wal_lp_staked_full75] = bcmul($t,0.75,18);
 
 $tt = explode(".",$t);
 $tt = $tt[1];
 $tt = strlen($tt);
 $tt = "0.".view_number(1,$tt,"0");
-$o2[$wal][lp_matic_sushi_gnft_wal_lp_step] = $tt;
-
+//$o2[$wal][lp_matic_sushi_gnft_wal_lp_step] = $tt;
 /*
 if($t < 0.001 && $t)
 {
 $t = substr(($t*1000),0,7)." m";
 }
 */
-$o2[$wal][lp_matic_sushi_gnft_wal_lp_bal] = $t;
+$o2[$wal][lp_matic_sushi_gnft_wal_lp_staked] = $t;
 
 $t = $t5[19];
 $t = round($t,2);
-$o2[$wal][lp_matic_sushi_gnft_wal_lp_bal_usd] = $t;
+$o2[$wal][lp_matic_sushi_gnft_wal_lp_staked_usd] = $t;
 
 $t = $t5[19] / $rate;
 $t = round($t,2);
-$o2[$wal][lp_matic_sushi_gnft_wal_lp_bal_ddao] = $t;
+$o2[$wal][lp_matic_sushi_gnft_wal_lp_staked_ddao] = $t;
 
 
 //-------------------------------------
 $t = $t5[22];
-$o2[$wal][lp_matic_quick_gnft_wal_lp_bal_full] = $t;
-$o2[$wal][lp_matic_quick_gnft_wal_lp_bal_full25] = bcmul($t,0.25,18);;
-$o2[$wal][lp_matic_quick_gnft_wal_lp_bal_full50] = bcmul($t,0.5,18);;
-$o2[$wal][lp_matic_quick_gnft_wal_lp_bal_full75] = bcmul($t,0.75,18);;
+$o2[$wal][lp_matic_quick_gnft_wal_lp_staked_full] = $t;
+//$o2[$wal][lp_matic_quick_gnft_wal_lp_staked_full25] = bcmul($t,0.25,18);;
+//$o2[$wal][lp_matic_quick_gnft_wal_lp_staked_full50] = bcmul($t,0.5,18);;
+//$o2[$wal][lp_matic_quick_gnft_wal_lp_staked_full75] = bcmul($t,0.75,18);;
 $tt = explode(".",$t);
 $tt = $tt[1];
 $tt = strlen($tt);
 $tt = "0.".view_number(1,$tt,"0");
-$o2[$wal][lp_matic_quick_gnft_wal_lp_step] = $tt;
+//$o2[$wal][lp_matic_quick_gnft_wal_lp_step] = $tt;
 
-$t2 = $t;
 /*
+$t2 = $t;
 if($t)
 {
 if($t2 < 0.001)
@@ -258,7 +258,6 @@ $t2 = substr($t2,0,7);
 $t = $t2." m";
 }
 
-
 if($t2 < 0.001 && $t2)
 {
 $t2 *= 1000;
@@ -267,30 +266,32 @@ $t = $t2." &mu;";
 }
 */
 
-$o2[$wal][lp_matic_quick_gnft_wal_lp_bal] = $t;
+$o2[$wal][lp_matic_quick_gnft_wal_lp_staked] = $t;
 
 $t = $t5[27];
 $t = round($t,2);
-$o2[$wal][lp_matic_quick_gnft_wal_lp_bal_usd] = $t;
+$o2[$wal][lp_matic_quick_gnft_wal_lp_staked_usd] = $t;
 
 $t = $t5[27] / $rate;
 $t = round($t,2);
-$o2[$wal][lp_matic_quick_gnft_wal_lp_bal_ddao] = $t;
+$o2[$wal][lp_matic_quick_gnft_wal_lp_staked_ddao] = $t;
 
 
 
 }
+print_r($o2);
 
-
+die;
 foreach($o2 as $w=>$v2)
 {
     $txt = json_encode($v2,192);
+print $txt;
     $t = pathinfo(__FILE__);
     $f = $cache_dir."tmp/".$w.".".$t[filename].".json";
     $a = @file_get_contents($f);
 //    if(file_exists($f))    print "File exists: $f\n";
 //print $f."\n";
-    print $txt;
+//    print $txt;
 
     if(md5($a) != md5($txt))
     {
