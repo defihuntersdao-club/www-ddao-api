@@ -16,7 +16,7 @@ $f = "/rpc.php";
 if(file_exists($f))
 include $f;
 
-$curl1 = "curl --connect-timeout 4 -H 'content-type: application/json' -X POST --data ";
+$curl1 = "curl --connect-timeout 1 -H 'content-type: application/json' -X POST --data ";
 
 
 include __DIR__."/sale.php";
