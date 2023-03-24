@@ -3,7 +3,6 @@
 //print "<pre>";
 // Sale:   0xc0a8d68d
 $id = $item2;
-$sale_id = $id;
 $w = $item3;
 unset($v,$t,$t2);
 
@@ -11,12 +10,12 @@ $a = $contracts[alloc_matic];
 $contractAddress = $a;
 
 $contractAddress2[matic] = $contractAddress;
-//$o2[contract] = $contractAddress;
+$o2[contract] = $contractAddress;
 
 $a = $contracts[alloc_bsc];
 $contractAddress = $a;
 
-$contractAddress2[bsc] = $contractAddress;
+//$contractAddress2[bsc] = $contractAddress;
 
 
 $c_key[1] = "name";
@@ -32,11 +31,9 @@ $keys[] = "amount2d";
 $keys[] = "amount3d";
 $keys[] = "cap";
 
-$nn3 = 0;
+
 foreach($contractAddress2 as $net=>$contractAddress)
 {
-$nn3++;
-//unset($jss);
 //print "contractAddress: $contractAddress\n";
 $rpc = $rpc_mas[$net];
 unset($jss);
@@ -97,7 +94,7 @@ $jss[] = $v;
 // AllocSaleLevelAmount:   0x6a1a72bc
 unset($v,$t2);
 $b = "0x9462e2df";
-$t = $sale_id;
+$t = $id;
 $t = dechex($t);
 //$t = substr($t,2);
 //$t = substr($w,2);
@@ -121,7 +118,7 @@ $jss[] = $v;
 //--------------------------------
 unset($v,$t2);
 $b = "0xdd3680fc";
-$t = $sale_id;
+$t = $id;
 $t = dechex($t);
 //$t = substr($t,2);
 //$t = substr($w,2);
@@ -149,7 +146,7 @@ for($i=1;$i<4;$i++)
 unset($v,$t2);
 $b = "0xc722c602";
 
-$t = $sale_id;
+$t = $id;
 $t = dechex($t);
 $t = view_number($t,64,0);
 $b .= $t;
@@ -177,7 +174,7 @@ $jss[] = $v;
 unset($v,$t2);
 $b = "0x6a1a72bc";
 
-$t = $sale_id;
+$t = $id;
 $t = dechex($t);
 $t = view_number($t,64,0);
 $b .= $t;
@@ -207,7 +204,7 @@ unset($v,$t2);
 // SaleAddrLevelAmount:    0xb64395b5
 $b = "0xb64395b5";
 
-$t = $sale_id;
+$t = $id;
 $t = dechex($t);
 $t = view_number($t,64,0);
 $b .= $t;
@@ -239,7 +236,7 @@ unset($v,$t2);
 // SaleAmoutView:  0xabeab5f8
 $b = "0xabeab5f8";
 
-$t = $sale_id;
+$t = $id;
 $t = dechex($t);
 $t = view_number($t,64,0);
 $b .= $t;
@@ -270,7 +267,7 @@ unset($v,$t2);
 // SaleTokensInfo: 0x45ba83bb
 $b = "0x45ba83bb";
 
-$t = $sale_id;
+$t = $id;
 $t = dechex($t);
 $t = view_number($t,64,0);
 $b .= $t;
@@ -296,7 +293,6 @@ $jss[] = $v;
 
 
 //print_r($jss);
-//print "RPC: $rpc\n";
 if(count($jss))
 {
     $nn = 0;
@@ -310,13 +306,8 @@ if(count($jss))
     while(!count($mas));
 }
 //print_r($mas);
-//if(0)
-//$nn = 0;
 foreach($mas as $v2)
 {
-    unset($t4);
-//$nn++;
-//if($nn2 == 2)continue;
     $id = $v2[id];
     $t = explode("_",$id);
     $net2 = $t[0];
@@ -324,8 +315,6 @@ foreach($mas as $v2)
     $grp = $t[2];
     $v = $v2[result];
 
-//print "NET2: $net2\n";
-//    if(0)
     switch($case)
     {
 	case "Sale":
@@ -333,7 +322,6 @@ foreach($mas as $v2)
 	    $t = substr($v,2);
 	    $l = strlen($t)/64;
 //print " - $l -\n";
-//	    if(0)
 	    for($j=0;$j<$l;$j++)
 	    {
 //print "-- $j --\n";
@@ -378,23 +366,13 @@ foreach($mas as $v2)
 //	    print_r($t5);
 	    foreach($t5 as $k=>$v3)
 	    {
-
-		switch($k)
-		{
-		    case "cap":
-		    $o2["Sale_".$k] += $v3;
-		    break;
-		    default:
-		    $o2["Sale_".$k] = $v3;
-		}
+	    $o2["Sale_".$k] = $v3;
 	    }
 
 	break;
 	case "SaleTokensInfo":
-//print "!!!!!!!!!!!!!!!!!\n";
 	    unset($t3);
 	    $t = substr($v,2);
-//print $t."\n";
 	    $l = strlen($t)/64;
 	    for($j=0;$j<$l;$j++)
 	    {
@@ -411,19 +389,18 @@ foreach($mas as $v2)
 	    $nn = 0;
 	    $nn2 = 1;
 //print_r($t3);
-	    //if(0)
 	    foreach($t3 as $k3=>$v3)
 	    {
 		switch($nn)
 		{
 		    case "0":
 			$t = "0x".substr($v3,24);
-			$o2[$net2."_sale_tkn_".$nn2] = $t;
+			$o2[$net."_sale_tkn_".$nn2] = $t;
 		    break;
 		    case "1":
 			$t = hexdec($v3);
 			$decimals[$nn2] = $t;
-			$o2[$net2."_sale_decimals_".$nn2] = $t;
+			$o2[$net."_sale_decimals_".$nn2] = $t;
 		    break;
 		    case "2":
 			$t = gmp_hexdec($v3);
@@ -432,7 +409,7 @@ foreach($mas as $v2)
 			$t = floor($t);
 			//$t = gmp_strvb
 			//$decimals[$nn2] = $t;
-			$o2[$net2."_sale_balance_".$nn2] = $t;
+			$o2[$net."_sale_balance_".$nn2] = $t;
 
 		    break;
 		    case "3":
@@ -449,7 +426,7 @@ foreach($mas as $v2)
 			if($t > 100000)$t = "&infin;";
 			//$t = gmp_strvb
 			//$decimals[$nn2] = $t;
-			$o2[$net2."_sale_allowance_".$nn2] = $t;
+			$o2[$net."_sale_allowance_".$nn2] = $t;
 		    break;
 		    case "4":
 			$t = $v3;
@@ -462,7 +439,7 @@ foreach($mas as $v2)
 
 			    $c .= chr($t2);
 			}
-			$o2[$net2."_sale_abbr_".$nn2] = $c;
+			$o2[$net."_sale_abbr_".$nn2] = $c;
 		    break;
 		}
 		$nn++;
@@ -475,36 +452,19 @@ foreach($mas as $v2)
 
 	default:
 	$v = hexdec($v);
-//print "GRP: $grp\n";
-//print "CASE: $case\n";
 	if($grp)
 	{
-	$kk = $case."_".$grp;
-//print $kk."<br>\n";
-	    switch($case)
-	    {
-		case "SaleAmount":
-		    if(!isset($o2[$kk]))
-    		    $o2[$kk] += $v;
-		break;
-		default:
-    		$o2[$kk] += $v;
-	    }
-
-	$o2[$case."_".$net2."_".$grp] = $v;
+	$o2[$case."_".$grp] += $v;
+	$o2[$case."_".$net."_".$grp] = $v;
 	}
 	else
 	{
-//print $case."<br>\n";
-//	if($case == "aleAmount_")
 	$o2[$case] += $v;
-	$o2[$case."_".$net2] = $v;
+	$o2[$case."_".$net] = $v;
 	}
-	
     }
-
 }
-//print "---------------------\n";
+
 
 }
 //if(!$o2[Sale_img])$o2[Sale_img] = "&lt;img src='/images/no_image.png'&gt;";
@@ -517,7 +477,7 @@ $o2[AllocPerc] = $t;
 $t = floor($t);
 $o2[AllocPerc2] = $t;
 
-//print_r($o2);
 ksort($o2);
+//print_r($o2);
 $o[result] = $o2;
 ?>

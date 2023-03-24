@@ -378,15 +378,7 @@ foreach($mas as $v2)
 //	    print_r($t5);
 	    foreach($t5 as $k=>$v3)
 	    {
-
-		switch($k)
-		{
-		    case "cap":
-		    $o2["Sale_".$k] += $v3;
-		    break;
-		    default:
-		    $o2["Sale_".$k] = $v3;
-		}
+	    $o2["Sale_".$k] = $v3;
 	    }
 
 	break;
@@ -480,7 +472,6 @@ foreach($mas as $v2)
 	if($grp)
 	{
 	$kk = $case."_".$grp;
-//print $kk."<br>\n";
 	    switch($case)
 	    {
 		case "SaleAmount":
@@ -495,7 +486,6 @@ foreach($mas as $v2)
 	}
 	else
 	{
-//print $case."<br>\n";
 //	if($case == "aleAmount_")
 	$o2[$case] += $v;
 	$o2[$case."_".$net2] = $v;
